@@ -1,0 +1,31 @@
+{
+  "devDependencies": {
+    "tailwindcss": "^3.2.4"
+  },
+  "name": "workwise",
+  "description": "Sharing Platform for Co-Working Spaces",
+  "version": "1.0.0",
+  "dependencies": {
+
+  },
+  "scripts": {
+    "dev": "npx tailwindcss -i css/input.css -o css/output.css --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/remoflury/workwise.git"
+  },
+  "keywords": [
+    "Workwise",
+    "Sharing",
+    "Platform",
+    "Co-Working",
+    "Space"
+  ],
+  "author": "Jasmin Winteler, Riona Daly, Remo Flury",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/remoflury/workwise/issues"
+  },
+  "homepage": "https://github.com/remoflury/workwise#readme"
+}
