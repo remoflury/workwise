@@ -20,6 +20,7 @@ Steht die Verbindung, sollte bei jedem save automatisch alles auf den Server gep
 ## 1. Styling
 
 Möchtest du stylen, führe im Terminal den Command
+
 ``
 npm run dev
 ``
@@ -35,6 +36,7 @@ Nach jeder Änderung eines Tasks, führe nach einander im Terminal folgendes aus
   ``
   git add .
   ``
+
   Mit diesem Befehl werden geänderte Files getrackt.
 
 
@@ -51,5 +53,5 @@ Nach jeder Änderung eines Tasks, führe nach einander im Terminal folgendes aus
   ``
   git push
   ``
-  
+
   Mit diesem Befehl lädst du alle deine Commits auf github.
