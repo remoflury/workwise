@@ -19,8 +19,7 @@
 <body>
 
   <!-- Header -->
-  <!-- <?php include 'src/layout/header.php';?> -->
-  <!-- include($_SERVER['DOCUMENT_ROOT'] . "/path/to/header.php"); -->
+  <?php include 'src/layout/header.php';?>
 
   <div class="container">
     <h1>Heading 1</h1>
@@ -35,6 +34,7 @@
   </div>
 
   <!-- Footer -->
+  <?php include 'src/layout/footer.php';?>
 
   
 </body>

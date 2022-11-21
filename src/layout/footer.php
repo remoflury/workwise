@@ -1,4 +1,4 @@
-<footer class="bg-green">
+<footer class="">
   <div class="container">
     <p>Footer</p>
   </div>
