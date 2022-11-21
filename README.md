@@ -6,12 +6,12 @@
 **1. Installation**
 
  Öffne in VS Code ein Terminal und führe den Command 
- 
+
 ``
 npm install aus
 ``
 
-**2. Connectino DB** 
+**2. Connection DB** 
 
 Fülle die Connection in die sftp.json im Folder .vscode/ aus. Frage dazu beim Administrator nach.
 
