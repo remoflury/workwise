@@ -6,6 +6,7 @@
 **1. Installation**
 
  Öffne in VS Code ein Terminal und führe den Command 
+ 
 ``
 npm install aus
 ``
