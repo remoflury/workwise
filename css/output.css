@@ -421,6 +421,10 @@ video {
 
 /* Your Styling here */
 
+/* Typograhie */
+
+/* Layout */
+
 .container {
   padding-left: 1rem;
   padding-right: 1rem;
@@ -1807,11 +1811,6 @@ video {
 
 .align-super {
   vertical-align: super;
-}
-
-.text-7xl {
-  font-size: 4.5rem;
-  line-height: 1;
 }
 
 .font-bold {
