@@ -27,6 +27,9 @@ npm run dev
 ``
 
 aus. Dieser kompiliert automatisch alle Tailwind CSS Klassen ins output.css.
+Es kommt vor, dass das automatisch geänderte output.css nicht automatisch hocheladen wird. Falls dies auftritt mit cmd + shift + p nach "SFTP: Sync Local -> Remote" suchen und ausführen. 
+
+**Beachte:** Tailwind funktioniert nach dem Prinzip des mobile first
 
 ## 2. Git
 Nach jeder Änderung eines Tasks, führe nach einander im Terminal folgendes aus:

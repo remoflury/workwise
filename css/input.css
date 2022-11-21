@@ -5,10 +5,48 @@
 @layer base {
   /* Your Styling here */
 
+  /* Basics */
+
+  html,
+  body {
+    @apply scroll-smooth text-black
+  }
+
+
 
   /* Typograhie */
   h1 {
-    @apply text-
+   @apply text-5xl sm:text-6xl md:text-7xl 2xl:text-8xl text-current;
+   @apply mb-10 sm:mb-12 md:mb-14 lg:mb-16 xl:mb-20;
+  }
+
+  h2 {
+   @apply text-4xl sm:text-5xl md:text-[52px] lg:text-[56px] xl:text-6xl text-current;
+   @apply mb-8 sm:mb-10 md:mb-12 lg:mb-14 xl:mb-16 
+
+  }
+
+
+  h3 {
+    @apply text-3xl sm:text-4xl lg:text-[40px] xl:text-[44px] 2xl:text-5xl text-current;
+    @apply mb-6 sm:mb-8 md:mb-10 lg:mb-12 xl:mb-14 
+
+  }
+
+  h4 {
+    @apply text-2xl md:text-[27px] 2xl:text-3xl text-current;
+    @apply mb-4 sm:mb-6 md:mb-8 lg:mb-10 xl:mb-12 
+
+  }
+
+  h5 {
+    @apply text-xl md:text-[22px] xl:text-2xl text-current;
+    @apply mb-2 sm:mb-4 md:mb-6 lg:mb-8 xl:mb-10 
+
+  }
+
+  p {
+    @apply text-base md:text-lg xl:text-xl text-current
   }
 
 
