@@ -43,6 +43,7 @@ Nach jeder Änderung eines Tasks, führe nach einander im Terminal folgendes aus
   ``
   git commit -m "testmessage"
   ``
+
   Mit diesem Befehl wird ein "snapshot" aller getrackten Changes erstellt, damit die Changes später rückverfolgt werden können. Füge in den Anführungszeichen eine deskriptive Beschreibung deines Commits hinzu. z.B. "styling primary Button"
 
   **2.3 git push**
@@ -50,4 +51,5 @@ Nach jeder Änderung eines Tasks, führe nach einander im Terminal folgendes aus
   ``
   git push
   ``
+  
   Mit diesem Befehl lädst du alle deine Commits auf github.
