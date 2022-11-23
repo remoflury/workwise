@@ -13,7 +13,8 @@ aus
 
 **2. Connection DB** 
 
-Fülle die Connection in die sftp.json im Folder .vscode/ aus. Frage dazu beim Administrator nach.
+<!-- Fülle die Connection in die sftp.json im Folder .vscode/ aus. Frage dazu beim Administrator nach. -->
+Füge im root im ordner backend ein config.php hinzu. Die Connection erhähltst du beim Administrator.
 
 ## Development
 Steht die Verbindung, sollte bei jedem save automatisch alles auf den Server gepusht werden. Führe den Command 
