@@ -1,35 +1,34 @@
 # Workwise
-**Important:** Node.js muss installiert sein
+**Important:** Node.js und php muss installiert sein
 
 ## 1. Set up
 
 **1. Installation**
 
  Öffne in VS Code ein Terminal und führe den Command 
-
 ``
-npm install aus
+npm install 
 ``
+aus
 
 **2. Connection DB** 
 
 Fülle die Connection in die sftp.json im Folder .vscode/ aus. Frage dazu beim Administrator nach.
 
 ## Development
-Steht die Verbindung, sollte bei jedem save automatisch alles auf den Server gepusht werden.
-
-## 1. Styling
-
-Möchtest du stylen, führe im Terminal den Command
-
+Steht die Verbindung, sollte bei jedem save automatisch alles auf den Server gepusht werden. Führe den Command 
 ``
 npm run dev
 ``
+aus. Dieser startet die Entwicklung. Dein output kannst du auf localhost:8080 im Browser ansehen.
 
-aus. Dieser kompiliert automatisch alle Tailwind CSS Klassen ins output.css.
-Es kommt vor, dass das automatisch geänderte output.css nicht automatisch hocheladen wird. Falls dies auftritt mit cmd + shift + p nach "SFTP: Sync Local -> Remote" suchen und ausführen. 
+## 1. Styling
 
+Der Entwicklungscommand kompiliert automatisch alle Tailwind CSS Klassen ins output.css.
 **Beachte:** Tailwind funktioniert nach dem Prinzip des mobile first
+
+<!-- Es kommt vor, dass das automatisch geänderte output.css nicht automatisch hocheladen wird. Falls dies auftritt mit cmd + shift + p nach "SFTP: Sync Local -> Remote" suchen und ausführen.  -->
+
 
 ## 2. Git
 Nach jeder Änderung eines Tasks, führe nach einander im Terminal folgendes aus:

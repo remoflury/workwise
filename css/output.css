@@ -1949,14 +1949,14 @@ p {
   border-style: none;
 }
 
-.bg-green {
-  --tw-bg-opacity: 1;
-  background-color: rgb(69 107 77 / var(--tw-bg-opacity));
-}
-
 .bg-\[rgb\(255\2c 0\2c 0\)\] {
   --tw-bg-opacity: 1;
   background-color: rgb(255 0 0 / var(--tw-bg-opacity));
+}
+
+.bg-green {
+  --tw-bg-opacity: 1;
+  background-color: rgb(69 107 77 / var(--tw-bg-opacity));
 }
 
 .decoration-slice {
@@ -2069,6 +2069,11 @@ p {
      object-fit: scale-down;
 }
 
+.py-4 {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
 .text-left {
   text-align: left;
 }
@@ -2123,11 +2128,6 @@ p {
 
 .align-super {
   vertical-align: super;
-}
-
-.text-base {
-  font-size: 1rem;
-  line-height: 1.5rem;
 }
 
 .font-bold {
@@ -2200,11 +2200,6 @@ p {
 .stacked-fractions {
   --tw-numeric-fraction: stacked-fractions;
   font-variant-numeric: var(--tw-ordinal) var(--tw-slashed-zero) var(--tw-numeric-figure) var(--tw-numeric-spacing) var(--tw-numeric-fraction);
-}
-
-.text-orange-dark {
-  --tw-text-opacity: 1;
-  color: rgb(176 126 9 / var(--tw-text-opacity));
 }
 
 .text-\[\#336699\]\/\[\.35\] {
