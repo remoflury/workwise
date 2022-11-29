@@ -1,5 +1,5 @@
 # Workwise
-**Important:** Node.js und php muss installiert sein
+**Important:** Node.js und php muss installiert sein. Wird mit git gearbeitet, muss dies auch installiert sein.
 
 ## Coding Standards
 Intendation: 4
