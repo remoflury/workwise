@@ -30,7 +30,7 @@ Steht die Verbindung, sollte bei jedem save automatisch alles auf den Server gep
 ``
 npm run dev
 ``
-aus. Dieser startet die Entwicklung. Dein output kannst du auf localhost:8080 im Browser ansehen.
+aus. Dieser startet die Entwicklung. Dein output kannst du auf localhost:8080 im Browser ansehen. Beenden kannst du die Entwicklung indem du im Terminal Ctrl + C drückst
 
 ## 1. Styling
 
