@@ -1,6 +1,15 @@
 # Workwise
 **Important:** Node.js und php muss installiert sein
 
+## Coding Standards
+Intendation: 4
+semantische Tags verwenden
+Schreibweisen:
+  - JS: camelCase
+  - PHP: camelCase
+  - HTML: kebab-case
+  - Variabeln, Funktionen in Englisch
+
 ## 1. Set up
 
 **1. Installation**

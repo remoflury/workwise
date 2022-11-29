@@ -1,7 +1,4 @@
-<?php
-
-?>
-
+<!DOCTYPE html>
 <html lang="de">
 <head>
   <!-- Meta Tags -->
@@ -18,9 +15,9 @@
     <!-- Header -->
     <?php include 'src/layout/header.php';?>
 
-    <div class="container">
-      
-    </div>
+    <main class="container">
+      <!-- Hier kommt der Main Content -->
+    </main>
 
     <!-- Footer -->
     <?php include 'src/layout/footer.php';?>
