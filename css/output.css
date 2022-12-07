@@ -749,6 +749,20 @@ p {
   }
 }
 
+@media (min-width: 1280px) {
+  .container {
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+}
+
+@media (min-width: 1536px) {
+  .container {
+    padding-left: 3.5rem;
+    padding-right: 3.5rem;
+  }
+}
+
 *, ::before, ::after {
   --tw-border-spacing-x: 0;
   --tw-border-spacing-y: 0;
@@ -2605,6 +2619,20 @@ p {
     .sm\:container {
       padding-left: 2.5rem;
       padding-right: 2.5rem;
+    }
+  }
+
+  @media (min-width: 1280px) {
+    .sm\:container {
+      padding-left: 3rem;
+      padding-right: 3rem;
+    }
+  }
+
+  @media (min-width: 1536px) {
+    .sm\:container {
+      padding-left: 3.5rem;
+      padding-right: 3.5rem;
     }
   }
 
