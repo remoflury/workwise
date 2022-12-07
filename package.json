@@ -3,6 +3,13 @@
   "description": "Sharing Platform for Co-Working Spaces",
   "version": "1.0.0",
 
+  "author": "Jasmin Winteler, Riona Daly, Remo Flury",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/remoflury/workwise/issues"
+  },
+  "homepage": "https://github.com/remoflury/workwise#readme",
+
   "devDependencies": {
     "tailwindcss": "^3.2.4",
     "concurrently": "^7.4.0"
@@ -24,11 +31,5 @@
     "Platform",
     "Co-Working",
     "Space"
-  ],
-  "author": "Jasmin Winteler, Riona Daly, Remo Flury",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/remoflury/workwise/issues"
-  },
-  "homepage": "https://github.com/remoflury/workwise#readme"
+  ]
 }
