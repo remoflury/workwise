@@ -24,6 +24,8 @@
       <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Beatae mollitia porro iusto alias at. Pariatur cupiditate nobis doloribus consequuntur cumque. Eaque consectetur similique harum maxime! Ad nobis sint delectus quo?</p>
     </main>
 
+    <p>Test Jasmin</p>
+
     <!-- Footer -->
     <?php include 'src/layout/footer.php';?>
 
