@@ -11,6 +11,10 @@
     @apply scroll-smooth text-black
   }
 
+  body {
+    @apply min-h-screen
+  }
+
   /* Typograhie */
   h1 {
    @apply text-5xl sm:text-6xl md:text-7xl 2xl:text-8xl text-current;

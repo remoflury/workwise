@@ -430,6 +430,10 @@ html,
   color: rgb(35 31 32 / var(--tw-text-opacity));
 }
 
+body {
+  min-height: 100vh;
+}
+
 /* Typograhie */
 
 h1 {
