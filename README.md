@@ -8,7 +8,7 @@ Schreibweisen:
   - JS: camelCase
   - PHP: camelCase
   - HTML: kebab-case
-  - Variabeln, Funktionen in Englisch
+  - Variabeln, Funktionen in Englisch. Deskriptive Namen verwenden, z.B. getUserFromDb() statt user()
 
 ## 1. Set up
 
