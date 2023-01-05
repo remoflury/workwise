@@ -8,7 +8,7 @@
   <?php include 'src/layout/htmlHead/htmlLinks.php';?>
 
 
-  <title>Workwise</title>
+  <title>Workwise | Home</title>
 </head>
   <body>
 
