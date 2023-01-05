@@ -13,7 +13,11 @@ module.exports = {
           light: "#b07e094D",
           dark: "#b07e09" 
         } 
-      }
+      },
+      fontFamily: {
+        'body': ['Proxima Nova', 'sans-serif'],
+        'heading': ['Ligurino', 'sans-serif']
+      },
     },
     maxWidth: {
       '1/2': '50%',

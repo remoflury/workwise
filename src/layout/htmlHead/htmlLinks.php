@@ -4,5 +4,8 @@
 <!-- CSS -->
 <link rel="stylesheet" href="css/output.css">
 
+<!-- Fonts -->
+<link rel="stylesheet" href="https://use.typekit.net/alh7sdw.css">
+
 <!-- JS -->
 <script src="js/main.js" defer></script>

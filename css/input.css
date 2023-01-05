@@ -12,10 +12,18 @@
   }
 
   body {
-    @apply min-h-screen
+    @apply min-h-screen font-body font-normal
   }
 
   /* Typograhie */
+  h1,
+  h2, 
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-heading font-bold inline-block w-full
+  }
   h1 {
    @apply text-5xl sm:text-6xl md:text-7xl 2xl:text-8xl text-current;
    @apply mb-10 sm:mb-12 md:mb-14 lg:mb-16 xl:mb-20;

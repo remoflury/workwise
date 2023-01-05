@@ -432,9 +432,23 @@ html,
 
 body {
   min-height: 100vh;
+  font-family: Proxima Nova, sans-serif;
+  font-weight: 400;
 }
 
 /* Typograhie */
+
+h1,
+  h2, 
+  h3,
+  h4,
+  h5,
+  h6 {
+  display: inline-block;
+  width: 100%;
+  font-family: Ligurino, sans-serif;
+  font-weight: 700;
+}
 
 h1 {
   font-size: 3rem;
