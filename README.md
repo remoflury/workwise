@@ -35,14 +35,16 @@ aus. Dieser startet die Entwicklung. Dein output kannst du auf localhost:8080 im
 ## 1. Styling
 
 Der Entwicklungscommand kompiliert automatisch alle Tailwind CSS Klassen ins output.css.
-**Beachte:** Tailwind funktioniert nach dem Prinzip des mobile first
-
-<!-- Es kommt vor, dass das automatisch geänderte output.css nicht automatisch hocheladen wird. Falls dies auftritt mit cmd + shift + p nach "SFTP: Sync Local -> Remote" suchen und ausführen.  -->
-
+**Beachte:** Tailwind funktioniert nach dem Prinzip des mobile first.
 
 ## 2. Git
-Nach jeder Änderung eines Tasks, führe nach einander im Terminal folgendes aus:
 
+```
+git pull
+```
+Führe den git pull command jedes mal im Terminal aus, wenn du den aktuellen Stand von Github ziehen willst.
+
+Um den aktuellen Stand deiner Arbeit auf Github zu laden führe nacheinander im Terminal folgendes aus:
 
   **2.1 Git add**
 
@@ -51,7 +53,6 @@ Nach jeder Änderung eines Tasks, führe nach einander im Terminal folgendes aus
   ``
 
   Mit diesem Befehl werden geänderte Files getrackt.
-
 
   **2.2 Git commit**
 
