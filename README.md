@@ -1,5 +1,5 @@
 # Workwise
-**Important:** Node.js und php muss installiert sein. Wird mit git gearbeitet, muss dies auch installiert sein.
+Workwise ist eine Vermittlungsplattform, die Personen mit freien Räumen und Co-Working Space suchende Personen zusammenbringt.
 
 ## Coding Standards
 Intendation: 4
@@ -11,6 +11,7 @@ Schreibweisen:
   - Variabeln, Funktionen in Englisch. Deskriptive Namen verwenden, z.B. getUserFromDb() statt user()
 
 ## 1. Set up
+**Important:** Node.js und php muss installiert sein. Wird mit git gearbeitet, muss dies auch installiert sein.
 
 **1. Installation**
 
