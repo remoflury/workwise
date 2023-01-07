@@ -9,7 +9,7 @@
 
   <title>Workwise | Home</title>
 </head>
-  <body class="min-h-[200vh]">
+  <body class="min-h-screen">
     <!-- Header -->
     <?php include 'src/layout/header.php';?>
 
