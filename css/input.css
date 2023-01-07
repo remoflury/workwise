@@ -8,7 +8,7 @@
   /* Basics */
   html,
   body {
-    @apply scroll-smooth text-black
+    @apply scroll-smooth text-black overflow-x-hidden
   }
 
   body {
@@ -56,5 +56,20 @@
   /* Layout */
   .container {
     @apply px-4 sm:px-6 md:px-8 lg:px-10 xl:px-12 2xl:px-14
+  }
+
+  /* Menu open */
+  #hamburger.menu-open span:nth-child(1) {
+    @apply rotate-45 translate-y-[14px]
+  }
+  #hamburger.menu-open span:nth-child(2) {
+    @apply opacity-0
+  }
+  #hamburger.menu-open span:nth-child(3) {
+    @apply -rotate-[225deg] -translate-y-[14px]
+  }
+
+  #menu-mobile.menu-open {
+    @apply translate-x-0
   }
 }
