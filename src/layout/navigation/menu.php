@@ -22,7 +22,7 @@
         <li class="text-xl font-semibold "><a href="/">Buchungen</a></li>
         <li class="text-xl font-semibold "><a href="/">Profil</a></li>
         <li class="text-xl font-semibold "><a href="/">Inserat hinzufügen</a></li>
-        <li class="text-xl font-semibold "><a href="/">Kontakt</a></li>
+        <li class="text-xl font-semibold mt-4"><?php $link = "/";$btnText = "Kontakt"; include(__DIR__.'/../../components/buttons/primaryButton.php');?></li>
       </ul>
     </div>
   </div>
