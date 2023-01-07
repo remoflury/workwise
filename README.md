@@ -19,7 +19,7 @@ Schreibweisen:
 ``
 npm install 
 ``
-aus
+aus. Diese Installation ist einmalig und muss nur beim Projekt Setup gemacht werden.
 
 **2. Connection DB** 
 
