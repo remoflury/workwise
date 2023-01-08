@@ -8,7 +8,7 @@
   /* Basics */
   html,
   body {
-    @apply scroll-smooth text-black overflow-x-hidden
+    @apply scroll-smooth text-black overflow-x-hidden selection:bg-orange-light
   }
 
   body {

@@ -33,3 +33,15 @@ clickableMenus.forEach(menu => {
     
   })
 })
+
+//dropdown menu mobile
+const desktopExpandableMenu = document.querySelectorAll('[data-desktop-expandable-menu]');
+
+desktopExpandableMenu.forEach(menu => {
+  menu.addEventListener('click', () => {
+    const expandingMenu = menu.querySelector('ul');
+    const icon = menu.querySelector('img');
+    expandingMenu.classList.toggle('hidden')
+    icon.classList.toggle('rotate-90')
+  })
+})
