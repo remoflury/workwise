@@ -20,3 +20,16 @@ function setMenuOffset() {
 
 setMenuOffset();
 window.addEventListener('resize', setMenuOffset);
+
+//dropdown menu mobile
+const clickableMenus = document.querySelectorAll('[data-clickable-menu]');
+
+clickableMenus.forEach(menu => {
+  menu.addEventListener('click', () => {
+    const expandingMenu = menu.querySelector('[data-expanding-menu]');
+    const icon = menu.querySelector('img');
+    expandingMenu.classList.toggle('hidden');
+    icon.classList.toggle('rotate-90')
+    
+  })
+})
