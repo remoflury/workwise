@@ -80,4 +80,9 @@
   #menu-mobile.menu-open {
     @apply translate-x-0
   }
+
+  /* Input Fields */
+  input {
+    @apply border border-black px-4 py-2 focus-within:outline-none
+  }
 }
