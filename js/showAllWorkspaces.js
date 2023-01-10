@@ -57,7 +57,6 @@ function showAllWorkspaces() {
           workspaceElem.classList.add('p-4', 'shadow-card', 'mb-8', 'last:mb-0')
           workspacesWrapper.append(workspaceElem);
           image.src = workspace[4];
-
         })
       }
       console.log(data);

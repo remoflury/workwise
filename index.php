@@ -22,14 +22,12 @@
       <?php if (!isset($_SESSION['userId'])) { ?>
         <section>
           <h1>Welcome to Workwise</h1>
-          <div class="">
+          <div class="flex flex-wrap gap-12 justify-start">
             <?php 
               $link = 'registration.php';
               $btnText = 'Registrieren';
               include 'src/components/buttons/primaryButton.php'
             ?>
-          </div>
-          <div class="mt-4">
             <?php 
               $link = 'login.php';
               $btnText = 'Login';

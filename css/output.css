@@ -1817,6 +1817,10 @@ input:focus-within,
   gap: 1rem;
 }
 
+.gap-12 {
+  gap: 3rem;
+}
+
 .gap-x-8 {
   -moz-column-gap: 2rem;
        column-gap: 2rem;
