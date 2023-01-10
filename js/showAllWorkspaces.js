@@ -34,6 +34,7 @@ function showAllWorkspaces() {
           const address = document.createElement('p');
           const price = document.createElement('p');
           const date = document.createElement('p');
+          const user = document.createElement('p');
           
           // add data to elements
           objectName.textContent = workspace[2];
@@ -42,6 +43,7 @@ function showAllWorkspaces() {
           address.textContent = 'Adresse: ' + workspace[6]
           price.textContent = 'Preis: ' + workspace[7] + ' CHF / Tag';
           date.textContent = 'Verfügbar am: ' + workspace[8];
+          user.textContent = 'Von Nutzer : ' + workspace[9];
 
           // styling
           image.classList.add('aspect-video', 'w-full', 'h-full', 'mb-6', 'object-cover')
@@ -54,6 +56,7 @@ function showAllWorkspaces() {
           workspaceElem.appendChild(address);
           workspaceElem.appendChild(price);
           workspaceElem.appendChild(date);
+          workspaceElem.appendChild(user);
           workspaceElem.classList.add('p-4', 'shadow-card', 'mb-8', 'last:mb-0')
           workspacesWrapper.append(workspaceElem);
           image.src = workspace[4];
