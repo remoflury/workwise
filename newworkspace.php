@@ -25,20 +25,20 @@
         <h1>Inserat erstellen</h1>
         <div class="">
           <div class="my-2">
-            <label for="nameobject">Name Mietobjekt</label>
-            <input type="text" name="nameobject" id="nameobject" placeholder="Death Star">
+            <label for="objectname">Name Mietobjekt</label>
+            <input type="text" name="objectname" id="objectname" placeholder="Death Star">
           </div>
 
           <div class="my-2">
             <label for="status">Online</label>
             <input type="radio" name="status" id="online" >
             <label for="status">Offline</label>
-            <input type="radio" name="status" id="offline" >
+            <input type="radio" name="status" id="offline">
           </div>
           
           <div class="my-2">
             <label for="image">Bild-Url</label>
-            <input type="text" name="image" id="image">
+            <input type="text" name="image" id="image" placeholder="https://wookie-on-death-star.galaxy">
           </div>
           
           <div class="my-2">

@@ -1247,8 +1247,8 @@ input:focus-within,
   display: none;
 }
 
-.h-12 {
-  height: 3rem;
+.h-40 {
+  height: 10rem;
 }
 
 .h-1 {
@@ -1273,18 +1273,6 @@ input:focus-within,
 
 .h-8 {
   height: 2rem;
-}
-
-.h-24 {
-  height: 6rem;
-}
-
-.h-44 {
-  height: 11rem;
-}
-
-.h-40 {
-  height: 10rem;
 }
 
 .min-h-screen {
