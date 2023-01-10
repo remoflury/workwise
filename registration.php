@@ -41,10 +41,8 @@
             $onClickFunction = "registration()";
             include 'src/components/buttons/primaryButtonSubmit.php';
           ?>
-          <!-- <button onclick="registration()">Registrieren</button> -->
-
-
         </div>
+        <article id="message"></article>
       </section>
     </main>
 

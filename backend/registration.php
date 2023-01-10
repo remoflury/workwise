@@ -12,6 +12,8 @@ $email = $_POST["email"];
 $username = $_POST["username"];
 $password = $_POST["password"];
 
+// TODO: check if user already exist
+
 $sql = "INSERT INTO users (username, email, password) VALUES (:Username, :Email, :Password)";
 
 $stmt = $pdo->prepare($sql);
@@ -20,8 +22,14 @@ $erfolg = $stmt->execute(array('Username' => $username, 'Email' => $email, 'Pass
 
 if ($erfolg) {
 
-    echo 'Registrierung erfolgreich.';
+    echo '{
+      "error": false,
+      "message": "Registrierung erfolgreich"
+    }';
 } else {
 
-    echo '$erfolg';
+    echo '{
+      "error": true,
+      "message": "Ups, da lief etwas schief. Bitte versuche es erneut."
+    }';
 };

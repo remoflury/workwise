@@ -6,8 +6,6 @@ function registration() {
 
 
   // TODO: check if empty
-
-
   let formData = new FormData();
   formData.append('submit', true)
   formData.append('username', username);
@@ -21,14 +19,24 @@ function registration() {
     })
 
     .then((response) => {
-      return response.text();
+      return response.json();
     })
     .then((data) => {
-      if (data == 'nosubmit') {
-        window.location.href = '/registration.php'
-      }
-      console.log(data);
-    // document.querySelector('#nachricht').innerHTML = data;
 
+      const messageElem = document.querySelector('#message');
+      
+      // zeige nachricht in Article an
+      messageElem.textContent = data.message;
+
+      // wenn kein error, dann style so
+      if (data.error == false) {
+        messageElem.classList.add('bg-green', 'text-white', 'px-4', 'py-2', 'mt-8' )
+      } 
+      // sonst style so
+      else {
+        messageElem.classList.add('bg-red-500', 'text-white', 'px-4', 'py-2', 'mt-8' )
+      }
+
+      // console.log(data);
     })
 }
