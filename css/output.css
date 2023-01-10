@@ -856,7 +856,9 @@ section {
 
 /* Input Fields */
 
-input {
+input,
+  textarea {
+  resize: none;
   border-width: 1px;
   --tw-border-opacity: 1;
   border-color: rgb(35 31 32 / var(--tw-border-opacity));
@@ -866,7 +868,8 @@ input {
   padding-bottom: 0.5rem;
 }
 
-input:focus-within {
+input:focus-within,
+  textarea:focus-within {
   outline: 2px solid transparent;
   outline-offset: 2px;
 }
@@ -1140,16 +1143,12 @@ input:focus-within {
   margin-right: auto;
 }
 
-.ml-2 {
-  margin-left: 0.5rem;
+.mt-4 {
+  margin-top: 1rem;
 }
 
 .mt-8 {
   margin-top: 2rem;
-}
-
-.mt-4 {
-  margin-top: 1rem;
 }
 
 .mt-2 {
@@ -1248,6 +1247,10 @@ input:focus-within {
   display: none;
 }
 
+.h-12 {
+  height: 3rem;
+}
+
 .h-1 {
   height: 0.25rem;
 }
@@ -1270,6 +1273,18 @@ input:focus-within {
 
 .h-8 {
   height: 2rem;
+}
+
+.h-24 {
+  height: 6rem;
+}
+
+.h-44 {
+  height: 11rem;
+}
+
+.h-40 {
+  height: 10rem;
 }
 
 .min-h-screen {
@@ -2196,11 +2211,6 @@ input:focus-within {
   border-style: none;
 }
 
-.border-black {
-  --tw-border-opacity: 1;
-  border-color: rgb(35 31 32 / var(--tw-border-opacity));
-}
-
 .border-orange-dark {
   --tw-border-opacity: 1;
   border-color: rgb(176 126 9 / var(--tw-border-opacity));
@@ -2865,11 +2875,6 @@ input:focus-within {
 .content-\[\'this-is-also-valid\]-weirdly-enough\'\] {
   --tw-content: 'this-is-also-valid]-weirdly-enough';
   content: var(--tw-content);
-}
-
-.focus-within\:outline-none:focus-within {
-  outline: 2px solid transparent;
-  outline-offset: 2px;
 }
 
 .hover\:bg-white:hover {

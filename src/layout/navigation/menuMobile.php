@@ -28,7 +28,7 @@
             <li class="text-xl"><a href="/">Meine Inserate</a></li>
           </ul>
         </li>
-        <li class="text-xl font-semibold "><a href="/">Inserat hinzufügen</a></li>
+        <li class="text-xl font-semibold "><a href="newworkspace.php">Inserat hinzufügen</a></li>
         <li class="text-xl font-semibold mt-4">
           <?php 
             $link = "/";

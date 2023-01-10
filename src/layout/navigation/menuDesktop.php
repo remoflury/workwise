@@ -26,7 +26,7 @@
     </ul>
   </li>
   <li class="relative "data-desktop-expandable-menu>
-    <p class="cursor-pointer text-xl"><a href="/">Inserat hinzufügen</a></p>
+    <p class="cursor-pointer text-xl"><a href="newworkspace.php">Inserat hinzufügen</a></p>
   </li>
   <li>
     <?php 

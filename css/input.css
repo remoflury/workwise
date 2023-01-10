@@ -82,7 +82,8 @@
   }
 
   /* Input Fields */
-  input {
-    @apply border border-black px-4 py-2 focus-within:outline-none
+  input,
+  textarea {
+    @apply border border-black px-4 py-2 focus-within:outline-none resize-none
   }
 }
