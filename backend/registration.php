@@ -15,9 +15,27 @@ $password = $_POST["password"];
 // Passwort verschlüsseln
 $passwordHashed = password_hash($password, PASSWORD_DEFAULT);
 
-// TODO: check if user already exist
+// check if user already exist
+$sql = "SELECT email FROM users WHERE email = '$email'";
+$stmt = $pdo->prepare($sql);
 
-// Statement um Daten in DB einzufügen
+$success = $stmt->execute();
+
+if ($success) {
+  $results = $stmt->fetchAll();
+  $countResult = count($results);
+
+  if ($countResult === 1) {
+    echo '{
+      "error": true,
+      "message": "Es ist schon ein User mit derselben Email-Adresse vorhanden. Bitte benutze eine andere Email."
+    }';
+    exit();
+  }
+}
+
+
+// Statement um user in DB einzufügen (registration)
 $sql = "INSERT INTO users (username, email, password) VALUES (:Username, :Email, :Password)";
 
 $stmt = $pdo->prepare($sql);

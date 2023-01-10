@@ -36,7 +36,6 @@ function registration() {
       else {
         messageElem.classList.add('bg-red-500', 'text-white', 'px-4', 'py-2', 'mt-8' )
       }
-
       // console.log(data);
     })
 }
