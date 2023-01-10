@@ -32,6 +32,12 @@ if ($success) {
     }';
     exit();
   }
+} else {
+  echo '{
+    "error": true,
+    "message": "Ups, da lief etwas schief. Bitte versuche es erneut."
+  }';
+  exit();
 }
 
 

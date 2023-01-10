@@ -2881,6 +2881,10 @@ input:focus-within {
   font-weight: 700;
 }
 
+.hover\:opacity-80:hover {
+  opacity: 0.8;
+}
+
 .before\:hover\:text-center:hover::before {
   content: var(--tw-content);
   text-align: center;

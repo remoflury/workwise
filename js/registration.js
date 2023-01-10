@@ -31,6 +31,13 @@ function registration() {
       // wenn kein error, dann style so
       if (data.error == false) {
         messageElem.classList.add('bg-green', 'text-white', 'px-4', 'py-2', 'mt-8' )
+        const loginLink = document.createElement('a');
+        const breakElem = document.createElement('br');
+        loginLink.textContent = 'Hier einloggen.';
+        loginLink.href = "/login.php";
+        loginLink.classList.add('underline', 'hover:opacity-80', 'transition');
+        messageElem.appendChild(breakElem);
+        messageElem.appendChild(loginLink);
       } 
       // sonst style so
       else {
