@@ -25,7 +25,9 @@
       <li class="pt-2"><a href="/">Meine Inserate</a></li>
     </ul>
   </li>
-  
+  <li class="relative "data-desktop-expandable-menu>
+    <p class="cursor-pointer text-xl"><a href="/">Inserat hinzufügen</a></p>
+  </li>
   <li>
     <?php 
       $link = '/';
