@@ -1144,16 +1144,16 @@ input:focus-within {
   margin-left: 0.5rem;
 }
 
+.mt-8 {
+  margin-top: 2rem;
+}
+
 .mt-4 {
   margin-top: 1rem;
 }
 
 .mt-2 {
   margin-top: 0.5rem;
-}
-
-.mt-8 {
-  margin-top: 2rem;
 }
 
 .box-border {
@@ -2206,6 +2206,16 @@ input:focus-within {
   border-color: rgb(176 126 9 / var(--tw-border-opacity));
 }
 
+.bg-red-500 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(239 68 68 / var(--tw-bg-opacity));
+}
+
+.bg-green {
+  --tw-bg-opacity: 1;
+  background-color: rgb(69 107 77 / var(--tw-bg-opacity));
+}
+
 .bg-orange-dark {
   --tw-bg-opacity: 1;
   background-color: rgb(176 126 9 / var(--tw-bg-opacity));
@@ -2224,21 +2234,6 @@ input:focus-within {
 .bg-\[rgb\(255\2c 0\2c 0\)\] {
   --tw-bg-opacity: 1;
   background-color: rgb(255 0 0 / var(--tw-bg-opacity));
-}
-
-.bg-red-600 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(220 38 38 / var(--tw-bg-opacity));
-}
-
-.bg-green {
-  --tw-bg-opacity: 1;
-  background-color: rgb(69 107 77 / var(--tw-bg-opacity));
-}
-
-.bg-red-500 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(239 68 68 / var(--tw-bg-opacity));
 }
 
 .decoration-slice {
@@ -2541,11 +2536,6 @@ input:focus-within {
 .text-blue-500 {
   --tw-text-opacity: 1;
   color: rgb(59 130 246 / var(--tw-text-opacity));
-}
-
-.text-red-500 {
-  --tw-text-opacity: 1;
-  color: rgb(239 68 68 / var(--tw-text-opacity));
 }
 
 .underline {
@@ -2889,11 +2879,6 @@ input:focus-within {
 
 .hover\:font-bold:hover {
   font-weight: 700;
-}
-
-.hover\:text-green:hover {
-  --tw-text-opacity: 1;
-  color: rgb(69 107 77 / var(--tw-text-opacity));
 }
 
 .hover\:opacity-80:hover {

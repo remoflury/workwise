@@ -20,7 +20,11 @@ if ($success) {
   if ($countResult == 1) {
     $dbPassword = $results[0]['password'];
     $userId = $results[0]['ID'];
+    $username = $results[0]['username'];
+    $timestamp = time();
     checkPassword($password, $dbPassword, $userId);
+    startSession($userId, $username, $timestamp);
+    exit();
   }
 } else {
   echo '{
@@ -33,7 +37,6 @@ if ($success) {
 
 function checkPassword($password, $dbPassword, $userId) {
   if (password_verify($password, $dbPassword)) {
-    session_start();
     echo '{
       "error": false,
       "message": "Login erfolgreich"
@@ -44,4 +47,12 @@ function checkPassword($password, $dbPassword, $userId) {
       "message": "Email und Passwort stimmen nicht überein."
     }';
   }
+}
+
+function startSession($userId, $username, $timestamp) {
+  session_start();
+  $_SESSION['userId'] = $userId;
+  $_SESSION['username'] = $username;
+  $_SESSION['timestamp'] = $timestamp;
+  
 }

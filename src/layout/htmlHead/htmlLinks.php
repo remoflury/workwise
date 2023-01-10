@@ -12,3 +12,4 @@
 <script src="js/navigation.js" defer></script>
 <script src="js/registration.js" defer></script>
 <script src="js/login.js" defer></script>
+<script src="js/logout.js" defer></script>

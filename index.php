@@ -18,26 +18,36 @@
     <?php include 'src/layout/header.php';?>
 
     <main class="container">
-      <section>
-        <h1>Jetzt registrieren!</h1>
-        <?php 
-          $link = 'registration.php';
-          $btnText = 'Registrieren';
-          include 'src/components/buttons/primaryButton.php'
-        ?>
-      </section>
-      <?php echo $_SESSION['userId']?>
-      <!-- <h1 class="">Heading 1</h1>
-      <h2>Heading 2</h2>
-      <h3>Heading 3</h3>
-      <h4>Heading 4</h4>
-      <h5>Heading 5</h5>
-      <h6>Heading 6</h6>
+      <!-- Wenn nicht eingeloggt -->
+      <?php if (!isset($_SESSION['userId'])) { ?>
+        <section>
+          <h1>Welcome to Workwise</h1>
+          <div class="">
+            <?php 
+              $link = 'registration.php';
+              $btnText = 'Registrieren';
+              include 'src/components/buttons/primaryButton.php'
+            ?>
+          </div>
+          <div class="mt-4">
+            <?php 
+              $link = 'login.php';
+              $btnText = 'Login';
+              include 'src/components/buttons/primaryButton.php'
+            ?>
 
-      <input type="text" name="test" id="test" class="border border-black focus-within:outline-none px-4 py-2">
-      <button onclick="test()" class="border border-black px-4 py-2 ml-2">Submit</button> -->
+            </div>
+        </section>
+      <?php } ?>
 
-      <!-- <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Beatae mollitia porro iusto alias at. Pariatur cupiditate nobis doloribus consequuntur cumque. Eaque consectetur similique harum maxime! Ad nobis sint delectus quo?</p> -->
+      <!-- Wenn eingeloggt -->
+      <?php if (isset($_SESSION['userId'])) { ?>
+        <section>
+          <h1>Workwise</h1>
+          <p>Hallo <?php echo $_SESSION['username']?></p>
+        </section>
+      <?php } ?>
+
     </main>
 
     <!-- Footer -->
