@@ -1,3 +1,7 @@
+<?php
+  session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="de">
 <head>
@@ -22,6 +26,7 @@
           include 'src/components/buttons/primaryButton.php'
         ?>
       </section>
+      <?php echo $_SESSION['userId']?>
       <!-- <h1 class="">Heading 1</h1>
       <h2>Heading 2</h2>
       <h3>Heading 3</h3>
