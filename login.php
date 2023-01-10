@@ -1,3 +1,7 @@
+<?php 
+  require 'backend/auth.php';
+?>
+
 <!DOCTYPE html>
 <html lang="de">
 <head>

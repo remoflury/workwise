@@ -34,7 +34,6 @@ if ($success) {
   exit();
 }
 
-
 function checkPassword($password, $dbPassword, $userId) {
   if (password_verify($password, $dbPassword)) {
     echo '{
@@ -46,6 +45,7 @@ function checkPassword($password, $dbPassword, $userId) {
       "error": true,
       "message": "Email und Passwort stimmen nicht überein."
     }';
+    exit();
   }
 }
 
@@ -54,5 +54,4 @@ function startSession($userId, $username, $timestamp) {
   $_SESSION['userId'] = $userId;
   $_SESSION['username'] = $username;
   $_SESSION['timestamp'] = $timestamp;
-  
 }

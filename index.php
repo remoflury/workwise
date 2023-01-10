@@ -1,5 +1,5 @@
-<?php
-  session_start();
+<?php 
+  require 'backend/auth.php';
 ?>
 
 <!DOCTYPE html>
