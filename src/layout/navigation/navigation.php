@@ -9,7 +9,7 @@
     <button 
       id="hamburger"
       class="lg:hidden w-12 h-8 relative flex flex-col justify-between"
-      aria>
+      aria-expanded="false">
       <?php include_once 'hamburger.php' ?>
     </button>
 

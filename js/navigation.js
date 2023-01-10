@@ -7,6 +7,7 @@ const menuMobileElem = document.querySelector('#menu-mobile');
 // toggling open Menu
 hamburgerBtn.addEventListener('click', () => {
   hamburgerBtn.classList.toggle('menu-open');
+  hamburgerBtn.setAttribute('aria-expanded', hamburgerBtn.getAttribute('aria-expanded') === 'true' ? 'false' : 'true')
   menuMobileElem.classList.toggle('menu-open');
   document.body.classList.toggle('overflow-y-hidden');
 })
