@@ -25,7 +25,7 @@
             <li class="text-xl"><a href="/">Profileinstellungen</a></li>
             <li class="text-xl"><a href="/">Zahlungsmittel</a></li>
             <li class="text-xl"><a href="/">Kontoverbindung</a></li>
-            <li class="text-xl"><a href="/">Meine Inserate</a></li>
+            <li class="text-xl"><a href="myworkspaces.php">Meine Inserate</a></li>
           </ul>
         </li>
         <li class="text-xl font-semibold "><a href="newworkspace.php">Inserat hinzufügen</a></li>

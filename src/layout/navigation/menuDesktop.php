@@ -22,7 +22,7 @@
       <li><a href="/">Profileinstellungen</a></li>
       <li class="pt-2"><a href="/">Zahlungsmittel</a></li>
       <li class="pt-2"><a href="/">Kontoverbindung</a></li>
-      <li class="pt-2"><a href="/">Meine Inserate</a></li>
+      <li class="pt-2"><a href="myworkspaces.php">Meine Inserate</a></li>
     </ul>
   </li>
   <li class="relative "data-desktop-expandable-menu>

@@ -1,7 +1,3 @@
-const baseUrl = 'http://localhost:8080';
-
-
-
 //Beispiel
 function test() {
   let textValue = document.querySelector('#test');

@@ -1151,8 +1151,16 @@ input:focus-within,
   margin-top: 2rem;
 }
 
+.mb-8 {
+  margin-bottom: 2rem;
+}
+
 .mt-2 {
   margin-top: 0.5rem;
+}
+
+.mb-6 {
+  margin-bottom: 1.5rem;
 }
 
 .box-border {
@@ -1245,6 +1253,10 @@ input:focus-within,
 
 .hidden {
   display: none;
+}
+
+.aspect-video {
+  aspect-ratio: 16 / 9;
 }
 
 .h-40 {
@@ -2441,6 +2453,11 @@ input:focus-within,
   vertical-align: super;
 }
 
+.text-3xl {
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+}
+
 .text-xl {
   font-size: 1.25rem;
   line-height: 1.75rem;
@@ -2582,6 +2599,10 @@ input:focus-within,
   -moz-osx-font-smoothing: auto;
 }
 
+.opacity-60 {
+  opacity: 0.6;
+}
+
 .bg-blend-normal {
   background-blend-mode: normal;
 }
@@ -2712,6 +2733,12 @@ input:focus-within,
 
 .mix-blend-plus-lighter {
   mix-blend-mode: plus-lighter;
+}
+
+.shadow-card {
+  --tw-shadow: 0 0 30px -15px rgba(35, 31, 32, 0.3);
+  --tw-shadow-colored: 0 0 30px -15px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
 .shadow {
@@ -2865,6 +2892,10 @@ input:focus-within,
   content: var(--tw-content);
 }
 
+.last\:mb-0:last-child {
+  margin-bottom: 0px;
+}
+
 .hover\:bg-white:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
@@ -2996,6 +3027,11 @@ input:focus-within,
   .md\:w-24 {
     width: 6rem;
   }
+
+  .md\:text-4xl {
+    font-size: 2.25rem;
+    line-height: 2.5rem;
+  }
 }
 
 @media (min-width: 1024px) {
@@ -3025,5 +3061,10 @@ input:focus-within,
   .xl\:gap-x-12 {
     -moz-column-gap: 3rem;
          column-gap: 3rem;
+  }
+
+  .xl\:text-5xl {
+    font-size: 3rem;
+    line-height: 1;
   }
 }

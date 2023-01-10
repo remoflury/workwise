@@ -44,15 +44,19 @@
       <?php if (isset($_SESSION['userId'])) { ?>
         <section>
           <h1>Workwise</h1>
-          <p>Hallo <?php echo $_SESSION['username']?></p>
+          <p class="text-3xl md:text-4xl xl:text-5xl font-bold opacity-60">Hallo <?php echo $_SESSION['username']?></p>
         </section>
       <?php } ?>
+
+      <section id="workspaces">
+      </section>
 
     </main>
 
     <!-- Footer -->
     <?php include 'src/layout/footer.php';?>
-
+    <script src="js/showAllWorkspaces.js"></script>
+    <script>showAllWorkspaces()</script>
     
   </body>
 </html>

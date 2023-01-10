@@ -14,3 +14,6 @@
 <script src="js/login.js" defer></script>
 <script src="js/logout.js" defer></script>
 <script src="js/newworkspace.js" defer></script>
+
+
+<script>const baseUrl = 'http://localhost:8080';</script>

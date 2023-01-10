@@ -18,6 +18,10 @@ module.exports = {
         'body': ['Proxima Nova', 'sans-serif'],
         'heading': ['Ligurino', 'sans-serif']
       },
+
+      boxShadow: {
+        'card': '0 0 30px -15px rgba(35, 31, 32, 0.3)',
+      }
     },
     maxWidth: {
       '1/2': '50%',
