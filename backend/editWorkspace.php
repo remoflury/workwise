@@ -34,12 +34,3 @@ if ($success) {
         "message": "Ups, da lief etwas schief. Bitte lade die Seite neu und versuche es noch einmal."
     }';
 }
-
-// echo $objectName;
-// echo $status;
-// echo $imageUrl;
-// echo $description;
-// echo $address;
-// echo $price;
-// echo $date;
-// echo $workspaceId;
