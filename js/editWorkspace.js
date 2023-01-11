@@ -5,6 +5,15 @@ function editWorkspace(workspaceElem, workspace) {
   btn.textContent = 'Bearbeiten';
   workspaceElem.appendChild(btn)
 
+  // Delete-Button erstellen
+  const btnDelete = document.createElement('button');
+  btnDelete.textContent = 'löschen';
+  workspaceElem.appendChild(btnDelete);
+
+  btnDelete.addEventListener('click', () =>{
+    deleteWorkspace(workspaceElem, workspace);
+  })
+
   btn.addEventListener('click', () => {
     // ToDo 
     // let online = false;
@@ -69,7 +78,9 @@ function editWorkspace(workspaceElem, workspace) {
     workspaceElem.append(btnSubmit);
 
     // on click auf Speicher, führe diese funktion aus.
-    btnSubmit.addEventListener('click', updateWorkspace(workspaceElem, workspace));
+    btnSubmit.addEventListener('click', () => {
+      updateWorkspace(workspaceElem, workspace)
+    });
   })
 }
 
@@ -128,3 +139,45 @@ function updateWorkspace(workspaceElem, workspaceData) {
   })
 }
 
+function deleteWorkspace(workspaceElem, workspaceData) {
+
+  if (confirm("Willst du dein Inserat wirklich löschen?")) {
+    let formData = new FormData();
+    formData.append('submit', true);
+    formData.append('workspaceid', workspaceData[0]);
+
+    fetch(`${baseUrl}/backend/deleteWorkspace.php`,
+    {
+      body: formData,
+      method: "post",
+    })
+
+    .then((response) => {
+      return response.json();
+    })
+    .then((data) => {
+
+      console.log(data)
+      if (data.error === true) {
+        alert(data.message)
+      }
+
+      location.reload();
+
+      // const messageElem = document.querySelector('#message');
+      
+      // // zeige nachricht in Article an
+      // messageElem.textContent = data.message;
+      // window.location.href = 'newworkspace.php#message'
+
+      // // wenn kein error, dann style so
+      // if (data.error === false) {
+      //   messageElem.classList.add('bg-green', 'text-white', 'px-4', 'py-2', 'mt-8' )
+      // }
+      // // sonst style so
+      // else {
+      //   messageElem.classList.add('bg-red-500', 'text-white', 'px-4', 'py-2', 'mt-8' )
+      // }
+    })
+  }
+}
