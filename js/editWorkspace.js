@@ -3,11 +3,13 @@ function editWorkspace(workspaceElem, workspace) {
   // create Bearbeite-Button
   const btn = document.createElement('button');
   btn.textContent = 'Bearbeiten';
-  workspaceElem.appendChild(btn)
+  addStylingToBtn(btn);
+  workspaceElem.appendChild(btn);
 
   // Delete-Button erstellen
   const btnDelete = document.createElement('button');
-  btnDelete.textContent = 'löschen';
+  btnDelete.textContent = 'Löschen';
+  addStylingToBtn(btnDelete)
   workspaceElem.appendChild(btnDelete);
 
   btnDelete.addEventListener('click', () =>{
@@ -75,6 +77,7 @@ function editWorkspace(workspaceElem, workspace) {
     // Speichern-Button erstellen
     const btnSubmit = document.createElement('button');
     btnSubmit.textContent = 'Speichern';
+    addStylingToBtn(btnSubmit)
     workspaceElem.append(btnSubmit);
 
     // on click auf Speicher, führe diese funktion aus.
@@ -157,27 +160,13 @@ function deleteWorkspace(workspaceElem, workspaceData) {
     })
     .then((data) => {
 
-      console.log(data)
+      // console.log(data)
+      // Wenn DB-Fehler
       if (data.error === true) {
         alert(data.message)
       }
 
       location.reload();
-
-      // const messageElem = document.querySelector('#message');
-      
-      // // zeige nachricht in Article an
-      // messageElem.textContent = data.message;
-      // window.location.href = 'newworkspace.php#message'
-
-      // // wenn kein error, dann style so
-      // if (data.error === false) {
-      //   messageElem.classList.add('bg-green', 'text-white', 'px-4', 'py-2', 'mt-8' )
-      // }
-      // // sonst style so
-      // else {
-      //   messageElem.classList.add('bg-red-500', 'text-white', 'px-4', 'py-2', 'mt-8' )
-      // }
     })
   }
 }

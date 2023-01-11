@@ -1138,6 +1138,11 @@ input:focus-within,
   margin-bottom: 0.5rem;
 }
 
+.mx-auto {
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .mt-8 {
   margin-top: 2rem;
 }
@@ -1160,6 +1165,26 @@ input:focus-within,
 
 .mt-2 {
   margin-top: 0.5rem;
+}
+
+.mr-4 {
+  margin-right: 1rem;
+}
+
+.mr-8 {
+  margin-right: 2rem;
+}
+
+.mr-12 {
+  margin-right: 3rem;
+}
+
+.mr-14 {
+  margin-right: 3.5rem;
+}
+
+.mt-6 {
+  margin-top: 1.5rem;
 }
 
 .box-border {
@@ -2915,6 +2940,14 @@ input:focus-within,
   margin-bottom: 0px;
 }
 
+.last\:mr-0:last-child {
+  margin-right: 0px;
+}
+
+.last\:ml-auto:last-child {
+  margin-left: auto;
+}
+
 .hover\:bg-white:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
@@ -2922,6 +2955,11 @@ input:focus-within,
 
 .hover\:font-bold:hover {
   font-weight: 700;
+}
+
+.hover\:text-orange-dark:hover {
+  --tw-text-opacity: 1;
+  color: rgb(176 126 9 / var(--tw-text-opacity));
 }
 
 .hover\:opacity-80:hover {
