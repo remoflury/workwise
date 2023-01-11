@@ -46,6 +46,10 @@ function createWorkspace() {
       // wenn kein error, dann style so
       if (data.error === false) {
         messageElem.classList.add('bg-green', 'text-white', 'px-4', 'py-2', 'mt-8' )
+
+        setTimeout(() => {
+          window.location.href = "/"
+        }, 2500)
       }
       // sonst style so
       else {
