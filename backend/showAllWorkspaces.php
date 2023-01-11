@@ -9,7 +9,7 @@ if(!isset($_POST['submit'])) {
 require 'config.php';
 
 // select alle inserate von DB, die online online sind
-$sql = "SELECT * FROM workspaces WHERE status = 'online'";
+$sql = "SELECT * FROM workspaces WHERE status = 'online' ORDER BY ID DESC";
 $stmt = $pdo->prepare($sql);
 
 $success = $stmt->execute();
