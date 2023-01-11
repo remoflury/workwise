@@ -25,7 +25,7 @@
       <li class="pt-2"><a href="myworkspaces.php">Meine Inserate</a></li>
     </ul>
   </li>
-  <li class="relative "data-desktop-expandable-menu>
+  <li class="relative">
     <p class="cursor-pointer text-xl"><a href="newworkspace.php">Inserat hinzufügen</a></p>
   </li>
   <li>

@@ -55,7 +55,7 @@ function showAllWorkspaces() {
           workspaceElem.appendChild(price);
           workspaceElem.appendChild(date);
           workspaceElem.appendChild(user);
-          workspaceElem.classList.add('p-4', 'shadow-card', 'mb-8', 'last:mb-0')
+          workspaceElem.classList.add('p-4', 'shadow-card', 'mb-8', 'last:mb-0', 'max-w-[40ch]', 'lg:max-w-[50ch]')
           workspacesWrapper.append(workspaceElem);
           image.src = workspace[4];
         })

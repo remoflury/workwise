@@ -1306,6 +1306,14 @@ input:focus-within,
   min-width: 100%;
 }
 
+.max-w-\[20ch\] {
+  max-width: 20ch;
+}
+
+.max-w-\[40ch\] {
+  max-width: 40ch;
+}
+
 .flex-shrink {
   flex-shrink: 1;
 }
@@ -1814,6 +1822,10 @@ input:focus-within,
 
 .gap-4 {
   gap: 1rem;
+}
+
+.gap-8 {
+  gap: 2rem;
 }
 
 .gap-x-8 {
@@ -3040,6 +3052,14 @@ input:focus-within,
 
   .lg\:hidden {
     display: none;
+  }
+
+  .lg\:max-w-\[50ch\] {
+    max-width: 50ch;
+  }
+
+  .lg\:gap-12 {
+    gap: 3rem;
   }
 
   .lg\:py-5 {

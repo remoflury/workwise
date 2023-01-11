@@ -46,7 +46,7 @@
         </section>
       <?php } ?>
 
-      <section id="workspaces">
+      <section id="workspaces" class="flex flex-wrap gap-8 lg:gap-12 items-start justify-center">
       </section>
 
     </main>
