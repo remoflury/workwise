@@ -12,7 +12,7 @@
   <?php include 'src/layout/htmlHead/htmlLinks.php';?>
 
 
-  <title>Workwise | Home</title>
+  <title>Workwise | Meine Inserate</title>
 </head>
   <body class="min-h-screen">
 
@@ -23,11 +23,15 @@
       <!-- Hier kommt der Main Content -->
       <section>
         <h1>Meine Inserate</h1>
+        <div class="flex flex-wrap gap-8 lg:gap-12 items-start justify-center" id="my-workspaces"></div>
       </section>
     </main>
 
     <!-- Footer -->
     <?php include 'src/layout/footer.php';?>
+
+    <script src="js/showMyWorkspaces.js"></script>
+    <script>showMyWorkspaces()</script>
 
   </body>
 </html>
