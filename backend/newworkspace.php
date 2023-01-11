@@ -14,13 +14,14 @@ $price = $_POST['price'];
 $date = $_POST['date'];
 session_start();
 $userId = $_SESSION['userId'];
+$username = $_SESSION['username'];
 
 require('config.php');
 
-$sql = "INSERT INTO workspaces (users_id, objectname, status, imageurl, description, address, price, date) VALUES (:UserID, :ObjectName, :Status, :ImageUrl, :Description, :Address, :Price, :Date)";
+$sql = "INSERT INTO workspaces (users_id, objectname, status, imageurl, description, address, price, date, users_username) VALUES (:UserID, :ObjectName, :Status, :ImageUrl, :Description, :Address, :Price, :Date, :Username)";
 $stmt = $pdo->prepare($sql);
 
-$erfolg = $stmt->execute(array('UserID' => $userId, 'ObjectName' => $objectName, 'Status' => $status, 'ImageUrl' => $imageUrl, 'Description' => $description, 'Address' => $address, 'Price' => $price, 'Date' => $date));
+$erfolg = $stmt->execute(array('UserID' => $userId, 'ObjectName' => $objectName, 'Status' => $status, 'ImageUrl' => $imageUrl, 'Description' => $description, 'Address' => $address, 'Price' => $price, 'Date' => $date, 'Username' => $username));
 
 if ($erfolg) {
 

@@ -48,8 +48,6 @@ function showAllWorkspaces() {
           // styling
           image.classList.add('aspect-video', 'w-full', 'h-full', 'mb-6', 'object-cover')
 
-
-
           workspaceElem.appendChild(objectName);
           workspaceElem.appendChild(image);
           workspaceElem.appendChild(description);
@@ -66,8 +64,8 @@ function showAllWorkspaces() {
     })
 }
 
-function createElement(tagType, description) {
-  let descriptionElem = document.createElement('p');
-  let tag = document.createElement(tagType);
-  descriptionElem.textContent = description;
-}
+// function createElement(tagType, description) {
+//   let descriptionElem = document.createElement('p');
+//   let tag = document.createElement(tagType);
+//   descriptionElem.textContent = description;
+// }
