@@ -1138,17 +1138,8 @@ input:focus-within,
   margin-bottom: 0.5rem;
 }
 
-.mx-auto {
-  margin-left: auto;
-  margin-right: auto;
-}
-
 .mt-8 {
   margin-top: 2rem;
-}
-
-.mb-4 {
-  margin-bottom: 1rem;
 }
 
 .mb-6 {
@@ -1167,16 +1158,8 @@ input:focus-within,
   margin-top: 0.5rem;
 }
 
-.mr-4 {
-  margin-right: 1rem;
-}
-
-.mr-8 {
-  margin-right: 2rem;
-}
-
-.mr-12 {
-  margin-right: 3rem;
+.mb-4 {
+  margin-bottom: 1rem;
 }
 
 .mr-14 {
@@ -1287,10 +1270,6 @@ input:focus-within,
   height: 10rem;
 }
 
-.h-4 {
-  height: 1rem;
-}
-
 .h-full {
   height: 100%;
 }
@@ -1315,12 +1294,16 @@ input:focus-within,
   height: 2rem;
 }
 
-.min-h-screen {
-  min-height: 100vh;
+.h-2 {
+  height: 0.5rem;
 }
 
-.w-4 {
-  width: 1rem;
+.h-4 {
+  height: 1rem;
+}
+
+.min-h-screen {
+  min-height: 100vh;
 }
 
 .w-full {
@@ -1339,8 +1322,20 @@ input:focus-within,
   width: 3rem;
 }
 
+.w-2 {
+  width: 0.5rem;
+}
+
+.w-4 {
+  width: 1rem;
+}
+
 .min-w-full {
   min-width: 100%;
+}
+
+.max-w-\[20ch\] {
+  max-width: 20ch;
 }
 
 .max-w-\[40ch\] {
@@ -1853,12 +1848,12 @@ input:focus-within,
   gap: 3rem;
 }
 
-.gap-8 {
-  gap: 2rem;
-}
-
 .gap-4 {
   gap: 1rem;
+}
+
+.gap-8 {
+  gap: 2rem;
 }
 
 .gap-x-8 {
@@ -2153,12 +2148,12 @@ input:focus-within,
   word-break: keep-all;
 }
 
-.rounded-full {
-  border-radius: 9999px;
-}
-
 .rounded {
   border-radius: 0.25rem;
+}
+
+.rounded-full {
+  border-radius: 9999px;
 }
 
 .rounded-t {
