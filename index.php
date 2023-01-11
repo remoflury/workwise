@@ -28,11 +28,6 @@
               $btnText = 'Registrieren';
               include 'src/components/buttons/primaryButton.php'
             ?>
-            <?php 
-              $link = 'login.php';
-              $btnText = 'Login';
-              include 'src/components/buttons/primaryButton.php'
-            ?>
 
             </div>
         </section>

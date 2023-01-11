@@ -30,9 +30,15 @@
   </li>
   <li>
     <?php 
-      $link = '/';
-      $btnText = 'Kontakt';
-      include './src/components/buttons/primaryButton.php';
+      if (isset($_SESSION['userId'])) {
+        $btnText = 'Logout';
+        $onClickFunction = 'logout()';
+        include 'src/components/buttons/primaryButtonSubmit.php';
+      } else {
+        $link = 'login.php';
+        $btnText = 'Login';
+        include 'src/components/buttons/primaryButton.php';
+      }
     ?>
   </li>
 </ul>

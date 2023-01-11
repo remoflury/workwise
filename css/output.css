@@ -3104,6 +3104,14 @@ input:focus-within,
     max-width: 50ch;
   }
 
+  .lg\:max-w-\[4s0ch\] {
+    max-width: 4s0ch;
+  }
+
+  .lg\:max-w-\[45ch\] {
+    max-width: 45ch;
+  }
+
   .lg\:gap-12 {
     gap: 3rem;
   }

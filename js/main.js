@@ -48,7 +48,7 @@ function renderWorkspaceCard(data, wrapper, showStatus) {
     workspaceElem.appendChild(price);
     workspaceElem.appendChild(date);
     workspaceElem.appendChild(user);
-    workspaceElem.classList.add('p-4', 'shadow-card', 'mb-8', 'last:mb-0', 'max-w-[40ch]', 'lg:max-w-[50ch]')
+    workspaceElem.classList.add('p-4', 'shadow-card', 'mb-8', 'last:mb-0', 'max-w-[40ch]', 'lg:max-w-[45ch]')
     wrapper.append(workspaceElem);
     image.src = workspace[4];
 
