@@ -11,6 +11,7 @@ function renderWorkspaceCard(data, wrapper, showStatus) {
     const date = document.createElement('p');
     const user = document.createElement('p');
 
+    // wenn Status angezeigt werden soll, dann..
     if (showStatus) {
       const status = document.createElement('p');
       let statusBall = document.createElement('span');
@@ -51,7 +52,7 @@ function renderWorkspaceCard(data, wrapper, showStatus) {
     wrapper.append(workspaceElem);
     image.src = workspace[4];
 
-    // wenn alle inserate angezeigt werden sollen
+    // wenn alle inserate angezeigt werden sollen, dann..
     if (showStatus) {
       editWorkspace(workspaceElem, workspace)
     }

@@ -1,9 +1,10 @@
 function editWorkspace(workspaceElem, workspace) {
+
+  // create Bearbeite-Button
   const btn = document.createElement('button');
   btn.textContent = 'Bearbeiten';
   workspaceElem.appendChild(btn)
 
-  // add "bearbeiten" button
   btn.addEventListener('click', () => {
     // ToDo 
     // let online = false;
@@ -19,7 +20,7 @@ function editWorkspace(workspaceElem, workspace) {
     // console.log('offline', offline)
 
 
-    // render input fields
+    // input fields statt statische Elemente anzeigen
     workspaceElem.innerHTML = `
       <div class="">
         <div class="my-2">
@@ -62,17 +63,19 @@ function editWorkspace(workspaceElem, workspace) {
       </div>
     `;
 
-    
+    // Speichern-Button erstellen
     const btnSubmit = document.createElement('button');
     btnSubmit.textContent = 'Speichern';
     workspaceElem.append(btnSubmit);
 
+    // on click auf Speicher, führe diese funktion aus.
     btnSubmit.addEventListener('click', updateWorkspace(workspaceElem, workspace));
   })
 }
 
 function updateWorkspace(workspaceElem, workspaceData) {
-      
+    
+  // speichere alle Werte der Input fields
   let objectname = workspaceElem.querySelector('#objectname').value;
   let statusOnline = workspaceElem.querySelector('#online').checked;
   // let statusOffline = workspaceElem.querySelector('#offline').checked;
@@ -88,6 +91,7 @@ function updateWorkspace(workspaceElem, workspaceData) {
     status = "online"
   } 
 
+  // erstelle neue formularDaten
   let formData = new FormData();
   formData.append('submit', true);
   formData.append('objectname', objectname);
@@ -99,6 +103,8 @@ function updateWorkspace(workspaceElem, workspaceData) {
   formData.append('date', date);
   formData.append('workspaceid', workspaceID);
 
+
+  // fetche backend
   fetch(`${baseUrl}/backend/editWorkspace.php`,
   {
     body: formData,
@@ -111,9 +117,11 @@ function updateWorkspace(workspaceElem, workspaceData) {
   .then((data) => {
     console.log(data)
 
+    // falls DB-error, dann..
     if (data.error) {
       alert(data.message)
     }
+    // falls kein DB-Error, dann lade die Seite neu.
     else {
       location.reload();
     }
