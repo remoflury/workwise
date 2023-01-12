@@ -23,11 +23,13 @@
       <!-- Hier kommt der Main Content -->
       <section>
         <h1>Meine Vermietungen</h1>
+        <input type="hidden" name="userId" id="user-id" value="<?php echo $_SESSION['userId'] ?>">
       </section>
     </main>
 
     <!-- Footer -->
     <?php include 'src/layout/footer.php';?>
-
+    <script src="js/showMyRentals.js"></script>
+    <script>showMyRentals()</script>
   </body>
 </html>
