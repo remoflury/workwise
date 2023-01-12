@@ -8,7 +8,7 @@ if(!isset($_POST['submit'])) {
 
 require 'config.php';
 
-// select alle inserate von DB, die online online sind
+// select alle inserate von DB, die online und nicht vermietet sind
 $sql = "SELECT * FROM workspaces WHERE (status = 'online' AND rented = '0') ORDER BY ID DESC";
 $stmt = $pdo->prepare($sql);
 
