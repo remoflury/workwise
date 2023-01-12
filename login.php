@@ -12,7 +12,7 @@
   <?php include 'src/layout/htmlHead/htmlLinks.php';?>
 
 
-  <title>Workwise | Home</title>
+  <title>Workwise | Login</title>
 </head>
   <body class="min-h-screen">
 
@@ -33,14 +33,15 @@
           
           <div class="my-2">
             <label for="password">Password</label>
-            <input type="password" name="password" id="password">
+            <input type="password" name="password" id="password" placeholder="min. 8 Zeichen">
           </div>
-
-          <?php 
-            $btnText ="Login";
-            $onClickFunction = "login()";
-            include 'src/components/buttons/primaryButtonSubmit.php';
-          ?>
+          <div class="mt-8">
+            <?php 
+              $btnText ="Login";
+              $onClickFunction = "login()";
+              include 'src/components/buttons/primaryButtonSubmit.php';
+            ?>
+          </div>
         </div>
         <article id="message"></article>
       </section>

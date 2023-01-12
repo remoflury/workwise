@@ -30,6 +30,11 @@ if ($success) {
     checkPassword($password, $dbPassword, $userId);
     startSession($userId, $username, $timestamp);
     exit();
+  } else {
+    echo '{
+      "error": true,
+      "message": "Es existiert kein Nutzer mit dieser Email. Bitte versuche es mit einem anderen Login."
+    }';
   }
 } else {
   echo '{
