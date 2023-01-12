@@ -34,7 +34,13 @@ function showAllWorkspaces() {
 
 // Funktion um Workspace-Cards zu rendern
 function renderWorkspaceCard(data, wrapper, showStatus) {
+  
   data.forEach((workspace) => {
+    // escape logged in status
+    if (workspace === true) {
+      return;
+    }
+
 
     // creating Elements
     const workspaceElem = document.createElement('article');
@@ -90,6 +96,11 @@ function renderWorkspaceCard(data, wrapper, showStatus) {
     // wenn alle inserate angezeigt werden sollen, dann..
     if (showStatus) {
       editWorkspace(workspaceElem, workspace)
+    }
+
+     // if user is logged in
+     if (data[6] === true) {
+      renderRentButton(workspaceElem, workspace[0])
     }
   })
 }
