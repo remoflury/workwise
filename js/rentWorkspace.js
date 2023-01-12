@@ -13,6 +13,7 @@ function renderRentButton(workspaceElem, workspaceId) {
 
 function rentWorkspace() {
   const workspaceId = document.querySelector('#workspace-id').value;
+  const userId = document.querySelector('#user-id').value;
 
   let formData = new FormData();
   formData.append('submit', true)
@@ -35,10 +36,7 @@ function rentWorkspace() {
       const btnWrapper = document.createElement('div');
       btnWrapper.classList.add('col-span-full', 'mt-4', 'lg:mt-12', 'flex', 'justify-center')
       workspaceWrapper.append(btnWrapper);
-      btnWrapper.appendChild(addRentBtn("Jetzt mieten"))
-
-      // Funktionalität mieten
-      
+      btnWrapper.appendChild(addRentBtn("Jetzt mieten", data, userId))
     })
 }
 
@@ -99,10 +97,39 @@ function createRentWorkspace(data, workspaceWrapper) {
   workspaceWrapper.appendChild(articleElem)
 }
 
-function addRentBtn(btnText) {
+function addRentBtn(btnText, data, userId) {
   const btnRent = document.createElement('button');
   addStylingToBtn(btnRent);
   btnRent.classList.add('!mx-0')
   btnRent.textContent= btnText;
+
+  // Funktionalität mieten
+  btnRent.addEventListener('click', () => {
+    rentNow(data, userId)
+  })
   return btnRent;
+}
+
+function rentNow(data, userId) {
+  if (confirm("Willst du du jetzt verbindlich mieten?")) {
+    let formData = new FormData();
+    formData.append('submit', true);
+    formData.append('workspaceId', data[0][0]);
+    formData.append('mieter', userId)
+    formData.append('vermieter', data[0][1])
+  
+    fetch(`${baseUrl}/backend/rent.php`, {
+      body: formData,
+      method: "post"
+    })
+    
+    .then((response) => {
+      return response.text();
+    })
+  
+    .then((data) => {
+      console.log(data)
+    })
+
+  }
 }
