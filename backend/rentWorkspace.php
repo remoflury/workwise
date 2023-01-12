@@ -19,11 +19,14 @@ if ($success) {
   $resultCount = count($result);
 
   // Wenn kein Resultat mit dieser ID vorhanden
-  if ($resultCount !== 1) {
+  if ($resultCount !== 1 || $resultCount === 0) {
     echo '{
       "error": true,
-      "message": "Ups, da lief etwas schief. Bitte versuche es später noch einmal."
+      "message": "Tut uns leid, das Inserat existiert leider nicht."
     }';
+  }
+  else {
+    echo json_encode($result);
   }
   
 } else {

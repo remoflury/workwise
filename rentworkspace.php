@@ -23,9 +23,9 @@
       <!-- Hier kommt der Main Content -->
       <section>
         <h1>Workspace mieten</h1>
-
         <input type="hidden" name="workspace-id" id="workspace-id" value="<?php echo $_GET['workspaceId'] ?>">
       </section>
+      <section id="workspace"></section>
     </main>
 
     <!-- Footer -->

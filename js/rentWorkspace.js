@@ -23,9 +23,11 @@ function rentWorkspace() {
     method: "post"
   })
     .then((response) => {
-      return response.text();
+      return response.json();
     })
     .then((data) => {
       console.log(data)
+      // const workspaceWrapper = document.createElement('#workspace');
+
     })
 }
