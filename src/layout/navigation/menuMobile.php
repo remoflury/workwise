@@ -14,7 +14,7 @@
           <p class="flex gap-x-4 items-center text-xl font-semibold cursor-pointer">Buchungen<img class="h-[2em] transition" src="/src/assets/icons/chevron-right.png" alt="Design Element"></p>
           <ul class="hidden pl-4 pb-2" data-expanding-menu>
             <li class="text-xl"><a href="/">Messages</a></li>
-            <li class="text-xl"><a href="/">Meine Vermietungen</a></li>
+            <li class="text-xl"><a href="myrentals.php">Meine Vermietungen</a></li>
             <li class="text-xl"><a href="/">Meine Buchungen</a></li>
             <li class="text-xl"><a href="/">Abrechnung</a></li>
           </ul>
