@@ -34,10 +34,9 @@ function showAllWorkspaces() {
 
 // Funktion um Workspace-Cards zu rendern
 function renderWorkspaceCard(data, wrapper, showStatus) {
-  
-  data.forEach((workspace) => {
+  for (let i = 0; i < data.length; i++) {
     // escape logged in status
-    if (workspace === true) {
+    if (i + 1 == data.length) {
       return;
     }
 
@@ -59,7 +58,7 @@ function renderWorkspaceCard(data, wrapper, showStatus) {
       statusBall.classList.add('w-4', 'h-4', 'rounded-full')
       status.classList.add('flex', 'gap-4', 'items-center', 'mb-4')
       
-      if (workspace[3] == 'online') {
+      if (data[i][3] == 'online') {
         statusBall.classList.add('bg-green')
       } else {
         statusBall.classList.add('bg-orange-dark')
@@ -71,13 +70,13 @@ function renderWorkspaceCard(data, wrapper, showStatus) {
     }
     
     // add data to elements
-    objectName.textContent = workspace[2];
-    image.src = workspace[4];
-    description.textContent = 'Beschreibung: ' + workspace[5];
-    address.textContent = 'Adresse: ' + workspace[6]
-    price.textContent = 'Preis: ' + workspace[7] + ' CHF / Tag';
-    date.textContent = 'Verfügbar am: ' + workspace[8];
-    user.textContent = 'Von Nutzer : ' + workspace[9];
+    objectName.textContent = data[i][2];
+    image.src = data[i][4];
+    description.textContent = 'Beschreibung: ' + data[i][5];
+    address.textContent = 'Adresse: ' + data[i][6]
+    price.textContent = 'Preis: ' + data[i][7] + ' CHF / Tag';
+    date.textContent = 'Verfügbar am: ' + data[i][8];
+    user.textContent = 'Von Nutzer : ' + data[i][9];
 
     // styling
     image.classList.add('aspect-video', 'w-full', 'h-full', 'mb-6', 'object-cover')
@@ -91,18 +90,14 @@ function renderWorkspaceCard(data, wrapper, showStatus) {
     workspaceElem.appendChild(user);
     workspaceElem.classList.add('p-4', 'shadow-card', 'mb-8', 'last:mb-0', 'max-w-[40ch]', 'lg:max-w-[45ch]')
     wrapper.append(workspaceElem);
-    image.src = workspace[4];
+    image.src = data[i][4];
 
     // wenn alle inserate angezeigt werden sollen, dann..
     if (showStatus) {
-      editWorkspace(workspaceElem, workspace)
+      editWorkspace(workspaceElem, data[i])
     }
 
-     // if user is logged in
-
-     // ToDo: remove last card, change index to last one !wichtig
-     if (data[9] === true) {
-      renderRentButton(workspaceElem, workspace[0])
-    }
-  })
+    renderRentButton(workspaceElem, data[i][0])
+  // })
+  }
 }
