@@ -80,7 +80,7 @@ function updateWorkspace(workspaceElem, workspaceData) {
   // speichere alle Werte der Input fields
   let objectname = workspaceElem.querySelector('#objectname').value;
   let statusOnline = workspaceElem.querySelector('#online').checked;
-  // let statusOffline = workspaceElem.querySelector('#offline').checked;
+  let statusOffline = workspaceElem.querySelector('#offline').checked;
   let imageUrl = workspaceElem.querySelector('#image').value;
   let description = workspaceElem.querySelector('#description').value;
   let address = workspaceElem.querySelector('#address').value;
@@ -88,11 +88,26 @@ function updateWorkspace(workspaceElem, workspaceData) {
   let date = workspaceElem.querySelector('#date').value;
   let workspaceID = workspaceData[0];
 
+  
+  // check for empty inputs
+  const inputValues = [objectname, imageUrl];
+  if (inputFieldsEmpty(inputValues)) {
+    createErrorMessage(workspaceElem, "Bitte alle erforderlichen Felder ausfüllen.")
+    return;
+  }
+  
+  if (checkEmptyRadionButtons(statusOnline, statusOffline)) {
+    createErrorMessage(workspaceElem, "Bitte den Status (online / offline) setzen.")
+    return;
+  }
+
+  if (workspaceElem.querySelector('#message')) workspaceElem.querySelector('#message').remove();
+  
+
   let status = "offline";
   if (statusOnline === true) {
     status = "online"
-  } 
-
+  }
   // erstelle neue formularDaten
   let formData = new FormData();
   formData.append('submit', true);

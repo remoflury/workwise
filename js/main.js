@@ -6,9 +6,24 @@ function inputFieldsEmpty(valuesArray) {
   let result = false;
   valuesArray.forEach((value) => {
     // console.log(value)
-    if (value == "") {
+    if (value == "" || value === false) {
       result = true;
     }
   })
+
   return result;
+}
+
+function checkEmptyRadionButtons(radioBtn1, radioBtn2) {
+  let result = false;
+  if (!radioBtn1 && !radioBtn2) result = true;
+  return result;
+}
+
+function createErrorMessage(parentElem, textMessage) {
+  const messageElem = document.createElement('article');
+  messageElem.id = "message"
+  messageElem.textContent = textMessage;
+  messageElem.classList.add('bg-red-500', 'text-white', 'px-4', 'py-2', 'mt-8' )
+  parentElem.appendChild(messageElem)
 }

@@ -4,7 +4,8 @@ function login() {
   const password = document.querySelector('#password').value;
   const messageElem = document.querySelector('#message');
   messageElem.innerHTML = '';
-  // console.log(email)
+
+  // check for empty input
   const inputValues = [email, password];
   if (inputFieldsEmpty(inputValues)) {
     messageElem.textContent = 'Fülle bitte alle erforderlichen Felder aus.';
@@ -31,6 +32,7 @@ function login() {
 
       // wenn kein error, dann style so
       if (data.error == false) {
+        messageElem.innerHTML = '';
         window.location.href = "/"
       } 
       // sonst style so
