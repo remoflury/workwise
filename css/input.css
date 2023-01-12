@@ -82,8 +82,14 @@
   }
 
   /* Input Fields */
-  input,
+  input:not([type="radio"]),
   textarea {
-    @apply border border-black px-4 py-2 focus-within:outline-none resize-none
+    @apply border border-black px-4 py-2 focus-within:outline-none resize-none block !w-full
   }
+
+  .form-wrapper {
+    @apply sm:max-w-3/4 md:max-w-1/2 mx-auto
+  }
+
+
 }

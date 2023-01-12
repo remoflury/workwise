@@ -1,6 +1,7 @@
 // Funktion um Workspace-Cards zu rendern
 function renderWorkspaceCard(data, wrapper, showStatus) {
   data.forEach((workspace) => {
+
     // creating Elements
     const workspaceElem = document.createElement('article');
     const objectName = document.createElement('h2');

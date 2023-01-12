@@ -856,8 +856,10 @@ section {
 
 /* Input Fields */
 
-input,
+input:not([type="radio"]),
   textarea {
+  display: block;
+  width: 100% !important;
   resize: none;
   border-width: 1px;
   --tw-border-opacity: 1;
@@ -868,10 +870,27 @@ input,
   padding-bottom: 0.5rem;
 }
 
-input:focus-within,
+input:not([type="radio"]):focus-within,
   textarea:focus-within {
   outline: 2px solid transparent;
   outline-offset: 2px;
+}
+
+.form-wrapper {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (min-width: 640px) {
+  .form-wrapper {
+    max-width: 75%;
+  }
+}
+
+@media (min-width: 768px) {
+  .form-wrapper {
+    max-width: 50%;
+  }
 }
 
 *, ::before, ::after {
@@ -1138,9 +1157,12 @@ input:focus-within,
   margin-bottom: 0.5rem;
 }
 
-.mx-auto {
-  margin-left: auto;
-  margin-right: auto;
+.ml-4 {
+  margin-left: 1rem;
+}
+
+.mt-6 {
+  margin-top: 1.5rem;
 }
 
 .mt-8 {
@@ -1159,32 +1181,16 @@ input:focus-within,
   margin-bottom: 2rem;
 }
 
+.mr-14 {
+  margin-right: 3.5rem;
+}
+
 .mt-4 {
   margin-top: 1rem;
 }
 
 .mt-2 {
   margin-top: 0.5rem;
-}
-
-.mr-4 {
-  margin-right: 1rem;
-}
-
-.mr-8 {
-  margin-right: 2rem;
-}
-
-.mr-12 {
-  margin-right: 3rem;
-}
-
-.mr-14 {
-  margin-right: 3.5rem;
-}
-
-.mt-6 {
-  margin-top: 1.5rem;
 }
 
 .box-border {
@@ -2197,12 +2203,12 @@ input:focus-within,
   border-bottom-left-radius: 0.25rem;
 }
 
-.border {
-  border-width: 1px;
-}
-
 .border-2 {
   border-width: 2px;
+}
+
+.border {
+  border-width: 1px;
 }
 
 .border-x {
@@ -2414,14 +2420,14 @@ input:focus-within,
   padding-bottom: 0.5rem;
 }
 
-.py-4 {
-  padding-top: 1rem;
-  padding-bottom: 1rem;
-}
-
 .px-16 {
   padding-left: 4rem;
   padding-right: 4rem;
+}
+
+.py-4 {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
 }
 
 .py-3 {
@@ -2645,6 +2651,10 @@ input:focus-within,
 
 .opacity-60 {
   opacity: 0.6;
+}
+
+.opacity-50 {
+  opacity: 0.5;
 }
 
 .bg-blend-normal {
@@ -2962,6 +2972,10 @@ input:focus-within,
   color: rgb(176 126 9 / var(--tw-text-opacity));
 }
 
+.hover\:opacity-70:hover {
+  opacity: 0.7;
+}
+
 .hover\:opacity-80:hover {
   opacity: 0.8;
 }
@@ -3098,14 +3112,6 @@ input:focus-within,
 
   .lg\:hidden {
     display: none;
-  }
-
-  .lg\:max-w-\[50ch\] {
-    max-width: 50ch;
-  }
-
-  .lg\:max-w-\[4s0ch\] {
-    max-width: 4s0ch;
   }
 
   .lg\:max-w-\[45ch\] {

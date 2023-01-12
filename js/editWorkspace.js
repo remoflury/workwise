@@ -17,6 +17,7 @@ function editWorkspace(workspaceElem, workspace) {
   })
 
   btn.addEventListener('click', () => {
+    workspaceElem.classList.toggle('min-w-full')
     // ToDo 
     // let online = false;
     // let offline = false;
@@ -75,10 +76,28 @@ function editWorkspace(workspaceElem, workspace) {
     `;
 
     // Speichern-Button erstellen
+    const btnWrapper = document.createElement('div');
+    btnWrapper.classList.add('flex', 'items-center', 'gap-4')
     const btnSubmit = document.createElement('button');
     btnSubmit.textContent = 'Speichern';
     addStylingToBtn(btnSubmit)
-    workspaceElem.append(btnSubmit);
+    btnWrapper.append(btnSubmit);
+    
+    // Close Button
+    const btnBack = document.createElement('button');
+    const icon = document.createElement('img');
+    icon.classList.add('opacity-50', 'hover:opacity-70', 'transition', 'mt-6')
+    btnBack.appendChild(icon);
+    icon.src = 'src/assets/icons/cross.png';
+    // ToDo add alt text
+    btnWrapper.append(btnBack);
+
+    workspaceElem.append(btnWrapper);
+
+    // on click auf close button
+    btnBack.addEventListener('click', () => {
+      editWorkspace(workspaceElem, workspace)
+    });
 
     // on click auf Speicher, führe diese funktion aus.
     btnSubmit.addEventListener('click', () => {

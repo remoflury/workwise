@@ -23,7 +23,7 @@
       <!-- Hier kommt der Main Content -->
       <section>
         <h1>Inserat erstellen</h1>
-        <div class="">
+        <div class="form-wrapper">
           <div class="my-2">
             <label for="objectname">Name Mietobjekt</label>
             <input type="text" name="objectname" id="objectname" placeholder="Death Star">
@@ -32,7 +32,7 @@
           <div class="my-2">
             <label for="status">Online</label>
             <input type="radio" name="status" id="online" >
-            <label for="status">Offline</label>
+            <label class="ml-4 "for="status">Offline</label>
             <input type="radio" name="status" id="offline">
           </div>
           
