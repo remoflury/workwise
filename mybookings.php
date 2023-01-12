@@ -29,7 +29,7 @@
 
     <!-- Footer -->
     <?php include 'src/layout/footer.php';?>
-    <script src="js/showMyRentals.js"></script>
-    <script>showMyRentals()</script>
+    <script src="js/showMyBookings.js"></script>
+    <script>showMyBookings()</script>
   </body>
 </html>
