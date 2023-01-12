@@ -13,13 +13,13 @@
         </div>
       </div>
       <div class="flex flex-row justify-between">
-        <div>
+        <a href="/" alt="zur Startseite" >
         <img src="src/assets/logo/logo-neu-2.svg" alt="" class="w-16 sm:w-20 md:w-24" >
-        </div>
-      <div class="flex flex-row gap-3 sm:gap-5 md:gap-8 items-center">
-          <img src="src/assets/icons/instagram.svg" alt="" class="w-8 sm:w-10 md:w-12">
-          <img src="src/assets/icons/facebook.svg" alt="" class="h-8 sm:h-10 md:h-12">
-          <img src="src/assets/icons/linkedin.svg" alt="" class="w-8 sm:w-10 md:w-12">
+        </a>
+        <div class="flex flex-row gap-3 sm:gap-5 md:gap-8 items-center">
+            <img src="src/assets/icons/instagram.svg" alt="" class="w-8 sm:w-10 md:w-12">
+            <img src="src/assets/icons/facebook.svg" alt="" class="h-8 sm:h-10 md:h-12">
+            <img src="src/assets/icons/linkedin.svg" alt="" class="w-8 sm:w-10 md:w-12">
         </div>
       </div>
 
