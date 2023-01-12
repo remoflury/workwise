@@ -28,37 +28,36 @@ function showMyBookings() {
       return;
     }
 
-    data.forEach((workspace) => {
-      const workspaceElem = document.createElement('article');      
-      const titleElem = document.createElement('h2');
-      const imgElem = document.createElement('img');
-      const dateElem = document.createElement('p');
-      const userElem = document.createElement('p');
-  
-      titleElem.textContent = workspace[2];
-      imgElem.src = workspace[4];
-      dateElem.textContent = 'Mietdatum: ' + workspace[8];
-      userElem.textContent = 'Vermieter: ' + workspace[9];
-
-      imgElem.classList.add('aspect-video', 'object-cover')
-      dateElem.classList.add('mt-4')
-
-      workspaceElem.appendChild(titleElem);
-      workspaceElem.appendChild(imgElem);
-      workspaceElem.appendChild(dateElem);
-      workspaceElem.appendChild(userElem);
-
-      workspaceElem.classList.add('shadow-card', 'p-4', 'max-w-[40ch]', 'lg:max-w-[45ch]')
-
-      myBookingsWrapper.appendChild(workspaceElem)
-    })
+    renderWorkspaces(data, myBookingsWrapper);
 
     myBookingsWrapper.classList.add('flex', 'flex-wrap', 'gap-12', 'justify-center')
 
+  })
+}
 
+function renderWorkspaces(data, wrapper) {
+  data.forEach((workspace) => {
+    const workspaceElem = document.createElement('article');      
+    const titleElem = document.createElement('h2');
+    const imgElem = document.createElement('img');
+    const dateElem = document.createElement('p');
+    const userElem = document.createElement('p');
 
+    titleElem.textContent = workspace[2];
+    imgElem.src = workspace[4];
+    dateElem.textContent = 'Mietdatum: ' + workspace[8];
+    userElem.textContent = 'Vermieter: ' + workspace[9];
 
+    imgElem.classList.add('aspect-video', 'object-cover')
+    dateElem.classList.add('mt-4')
 
-    
+    workspaceElem.appendChild(titleElem);
+    workspaceElem.appendChild(imgElem);
+    workspaceElem.appendChild(dateElem);
+    workspaceElem.appendChild(userElem);
+
+    workspaceElem.classList.add('shadow-card', 'p-4', 'max-w-[40ch]', 'lg:max-w-[45ch]')
+
+    wrapper.appendChild(workspaceElem)
   })
 }
