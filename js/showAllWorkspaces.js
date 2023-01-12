@@ -99,7 +99,9 @@ function renderWorkspaceCard(data, wrapper, showStatus) {
     }
 
      // if user is logged in
-     if (data[6] === true) {
+
+     // ToDo: remove last card, change index to last one
+     if (data[7] === true) {
       renderRentButton(workspaceElem, workspace[0])
     }
   })
