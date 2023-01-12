@@ -131,6 +131,7 @@ function rentNow(data, userId) {
       console.log(data)
 
       let messageElem = document.createElement('article');
+      messageElem.innerHTML = '';
       let messageWrapper = document.querySelector('#workspace');
       messageElem.textContent = data.message;
       messageWrapper.append(messageElem)
@@ -140,7 +141,10 @@ function rentNow(data, userId) {
       } else {
         messageElem.classList.add('bg-red-500', 'text-white', 'px-4', 'py-2', 'mt-8', 'col-span-full', 'lg:col-span-6', 'lg:col-start-3')
       }
-      // window.location.href = '#message'
+
+      setTimeout(() => {
+        window.location.href = '/mybookings.php';
+      }, 2000)
     })
 
   }
