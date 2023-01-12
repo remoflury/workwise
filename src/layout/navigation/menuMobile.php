@@ -10,6 +10,8 @@
             <li class="text-xl"><a href="/">FAQ</a></li>
           </ul>
         </li>
+        <!-- wenn eingeloggt -->
+        <?php if (isset($_SESSION['userId'])) { ?>
         <li data-clickable-menu>
           <p class="flex gap-x-4 items-center text-xl font-semibold cursor-pointer">Buchungen<img class="h-[2em] transition" src="/src/assets/icons/chevron-right.png" alt="Design Element"></p>
           <ul class="hidden pl-4 pb-2" data-expanding-menu>
@@ -29,6 +31,11 @@
           </ul>
         </li>
         <li class="text-xl font-semibold "><a href="newworkspace.php">Inserat hinzufügen</a></li>
+        <?php } else { ?>
+          <li>
+            <p class="text-xl font-semibold"><a href="contact.php">Kontakt</a></p>
+          </li>
+        <?php } ?>
         <li class="text-xl font-semibold mt-4">
           <?php 
             if (isset($_SESSION['userId'])) {
