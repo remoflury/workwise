@@ -28,13 +28,21 @@ function rentWorkspace() {
     .then((data) => {
       console.log(data)
       // create rent workspace
-      createRentWorkspace(data)
+      const workspaceWrapper = document.querySelector('#workspace');
+      createRentWorkspace(data, workspaceWrapper);
+
+      // Jetzt mieten button erstellen
+      const btnWrapper = document.createElement('div');
+      btnWrapper.classList.add('col-span-full', 'mt-4', 'lg:mt-12', 'flex', 'justify-center')
+      workspaceWrapper.append(btnWrapper);
+      btnWrapper.appendChild(addRentBtn("Jetzt mieten"))
+
+      // Funktionalität mieten
       
     })
 }
 
-function createRentWorkspace(data) {
-  const workspaceWrapper = document.querySelector('#workspace');
+function createRentWorkspace(data, workspaceWrapper) {
 
   const articleElem = document.createElement('article');
   const titleElem = document.createElement('h2');
@@ -89,4 +97,12 @@ function createRentWorkspace(data) {
   articleElem.appendChild(userElemLeft)
   articleElem.appendChild(userElemRight)
   workspaceWrapper.appendChild(articleElem)
+}
+
+function addRentBtn(btnText) {
+  const btnRent = document.createElement('button');
+  addStylingToBtn(btnRent);
+  btnRent.classList.add('!mx-0')
+  btnRent.textContent= btnText;
+  return btnRent;
 }
