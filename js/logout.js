@@ -15,7 +15,7 @@ function logout() {
     .then((data) => {
       
       console.log(data);
-      location.window.href = '/';
+      window.location.href = '/';
     })
 
 }
