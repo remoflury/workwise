@@ -25,6 +25,7 @@
         <h1>Meine Buchungen</h1>
         <input type="hidden" name="userId" id="user-id" value="<?php echo $_SESSION['userId'] ?>">
       </section>
+      <section id="my-bookings-wrapper"></section>
     </main>
 
     <!-- Footer -->
