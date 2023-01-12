@@ -43,6 +43,7 @@
       <?php } ?>
 
       <section id="workspaces" class="flex flex-wrap gap-8 lg:gap-12 items-start justify-center">
+        <h2>Vergügbare Workspaces</h2>
       </section>
 
     </main>
