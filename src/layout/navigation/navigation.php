@@ -2,7 +2,7 @@
   <div class="container flex justify-between gap-x-8 items-center">
     <!-- Logo -->
     <a href="/" title="zur Startseite">
-      <img class="w-16 sm:w-20 md:w-24" src="/src/assets/logo/Logo WorkWise ohne Schrift_v2.svg" alt="Zur Startseite">
+      <img class="w-16 sm:w-20 md:w-24" src="/src/assets/logo/logo-neu-ohneschrift.svg" alt="Zur Startseite">
     </a>
 
     <!-- Hamburger -->
