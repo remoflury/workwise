@@ -26,7 +26,9 @@
         <input type="hidden" name="workspace-id" id="workspace-id" value="<?php echo $_GET['workspaceId'] ?>">
         <input type="hidden" name="userId" id="user-id" value="<?php echo $_SESSION['userId'] ?>">
       </section>
-      <section id="workspace"></section>
+      <section id="workspace">
+      </section>
+    
     </main>
 
     <!-- Footer -->

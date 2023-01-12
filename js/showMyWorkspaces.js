@@ -12,11 +12,11 @@ function showMyWorkspaces() {
   .then((response) => {
     return response.json();
   })
+  
   .then((data) => {
     workspaceWrapper = document.getElementById('my-workspaces')
     const showStatus = true;
     renderWorkspaceCard(data, workspaceWrapper, showStatus)
     console.log(data)
-  }
-  )
+  })
 }

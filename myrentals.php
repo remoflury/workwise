@@ -12,7 +12,7 @@
   <?php include 'src/layout/htmlHead/htmlLinks.php';?>
 
 
-  <title>Workwise | Home</title>
+  <title>Workwise | Meine Buchungen</title>
 </head>
   <body class="min-h-screen">
 

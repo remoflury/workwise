@@ -124,11 +124,23 @@ function rentNow(data, userId) {
     })
     
     .then((response) => {
-      return response.text();
+      return response.json();
     })
   
     .then((data) => {
       console.log(data)
+
+      let messageElem = document.createElement('article');
+      let messageWrapper = document.querySelector('#workspace');
+      messageElem.textContent = data.message;
+      messageWrapper.append(messageElem)
+      // wenn ein error zurückkommt
+      if (data.error === false) {
+        messageElem.classList.add('bg-green', 'text-white', 'px-4', 'py-2', 'mt-8', 'col-span-full', 'lg:col-span-6', 'lg:col-start-3')
+      } else {
+        messageElem.classList.add('bg-red-500', 'text-white', 'px-4', 'py-2', 'mt-8', 'col-span-full', 'lg:col-span-6', 'lg:col-start-3')
+      }
+      // window.location.href = '#message'
     })
 
   }
