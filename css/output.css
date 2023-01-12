@@ -738,23 +738,46 @@ h5 {
   }
 }
 
-p {
+p,
+  button {
   font-size: 1rem;
   line-height: 1.5rem;
   color: currentColor;
 }
 
 @media (min-width: 768px) {
-  p {
+  p,
+  button {
     font-size: 1.125rem;
     line-height: 1.75rem;
   }
 }
 
 @media (min-width: 1280px) {
-  p {
+  p,
+  button {
     font-size: 1.25rem;
     line-height: 1.75rem;
+  }
+}
+
+p.lead {
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+  color: currentColor;
+}
+
+@media (min-width: 768px) {
+  p.lead {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+  }
+}
+
+@media (min-width: 1280px) {
+  p.lead {
+    font-size: 1.5rem;
+    line-height: 2rem;
   }
 }
 
@@ -1155,6 +1178,10 @@ input:not([type="radio"]):focus-within,
 .my-2 {
   margin-top: 0.5rem;
   margin-bottom: 0.5rem;
+}
+
+.mb-12 {
+  margin-bottom: 3rem;
 }
 
 .ml-4 {
@@ -3099,6 +3126,10 @@ input:not([type="radio"]):focus-within,
     width: 6rem;
   }
 
+  .md\:max-w-3\/4 {
+    max-width: 75%;
+  }
+
   .md\:text-4xl {
     font-size: 2.25rem;
     line-height: 2.5rem;
@@ -3137,6 +3168,10 @@ input:not([type="radio"]):focus-within,
 }
 
 @media (min-width: 1280px) {
+  .xl\:max-w-1\/2 {
+    max-width: 50%;
+  }
+
   .xl\:gap-x-12 {
     -moz-column-gap: 3rem;
          column-gap: 3rem;

@@ -49,8 +49,13 @@
     @apply mb-2 sm:mb-4 md:mb-6 lg:mb-8 xl:mb-10 
   }
 
-  p {
+  p,
+  button {
     @apply text-base md:text-lg xl:text-xl text-current
+  }
+
+  p.lead {
+    @apply text-lg md:text-xl xl:text-2xl text-current
   }
 
   /* Layout */
