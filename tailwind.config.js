@@ -21,6 +21,9 @@ module.exports = {
 
       boxShadow: {
         'card': '0 0 30px -15px rgba(35, 31, 32, 0.3)',
+      },
+      fontSize: {
+        "size-inherit": "inherit"
       }
     },
     maxWidth: {

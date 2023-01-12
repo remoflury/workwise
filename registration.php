@@ -24,7 +24,7 @@
       <section>
         <h1>Registrieren</h1>
 
-        <div class="">
+        <div class="form-wrapper">
           <div class="my-2">
             <label for="username">Benutzername</label>
             <input type="text" name="username" id="username" placeholder="Chewbacca">
@@ -39,12 +39,13 @@
             <label for="password">Password</label>
             <input type="password" name="password" id="password">
           </div>
-
-          <?php 
-            $btnText ="Registrieren";
-            $onClickFunction = "registration()";
-            include 'src/components/buttons/primaryButtonSubmit.php';
-          ?>
+          <div class="mt-8 flex justify-center">
+            <?php 
+              $btnText ="Registrieren";
+              $onClickFunction = "registration()";
+              include 'src/components/buttons/primaryButtonSubmit.php';
+            ?>
+          </div>
         </div>
         <article id="message"></article>
       </section>

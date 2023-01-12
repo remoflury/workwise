@@ -768,6 +768,7 @@ p,
 }
 
 a {
+  font-size: inherit;
   transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-backdrop-filter;
   transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
   transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter;
@@ -917,8 +918,9 @@ input:not([type="radio"]),
 
 input:not([type="radio"]):focus-within,
   textarea:focus-within {
-  outline: 2px solid transparent;
-  outline-offset: 2px;
+  outline-style: solid;
+  outline-width: 1px;
+  outline-color: #b07e09;
 }
 
 .form-wrapper {
