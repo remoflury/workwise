@@ -16,7 +16,7 @@ function login() {
     })
 
     .then((response) => {
-      return response.json();
+      return response.text();
     })
     .then((data) => {
 
