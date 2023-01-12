@@ -25,6 +25,7 @@
         <h1>Meine Vermietungen</h1>
         <input type="hidden" name="userId" id="user-id" value="<?php echo $_SESSION['userId'] ?>">
       </section>
+      <section id="my-rentals-wrapper"></section>
     </main>
 
     <!-- Footer -->

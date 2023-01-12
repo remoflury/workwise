@@ -28,14 +28,14 @@ function showMyBookings() {
       return;
     }
 
-    renderWorkspaces(data, myBookingsWrapper);
+    renderBookingWorkspaces(data, myBookingsWrapper);
 
     myBookingsWrapper.classList.add('flex', 'flex-wrap', 'gap-12', 'justify-center')
 
   })
 }
 
-function renderWorkspaces(data, wrapper) {
+function renderBookingWorkspaces(data, wrapper) {
   data.forEach((workspace) => {
     const workspaceElem = document.createElement('article');      
     const titleElem = document.createElement('h2');

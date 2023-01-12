@@ -15,7 +15,6 @@ $stmt = $pdo->prepare($sql);
 $success = $stmt->execute();
 
 if ($success) {
-  // $workspaces = $stmt->fetchAll();
   $results = $stmt->fetchAll();
 
   // push all workspace_ids into same array
@@ -24,7 +23,7 @@ if ($success) {
     array_push($workspaces, $results[$i]['workspace_id']);
   }
 
-    selectBookedWorkplaces($workspaces);
+  selectBookedWorkplaces($workspaces);
 
 } else {
   echo '{
@@ -38,7 +37,7 @@ function selectBookedWorkplaces($workspaces) {
   // bereinige array um es in statement zu passen
   $workspaces = join("','",$workspaces); 
 
-  // selektiere alle workspaces, welche gebucht worden sind
+  // selektiere alle workspaces von mieter, welche mieter gebucht hat
   $sql = "SELECT * FROM workspaces WHERE ID IN ('$workspaces')";
   $stmt = $pdo->prepare($sql);
 
