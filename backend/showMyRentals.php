@@ -17,6 +17,7 @@ $success = $stmt->execute();
 if($success) {
   $results = $stmt->fetchAll();
 
+  // ToDo statt in array pushen, nicht alles in sql stmt selektieren
   $workspaces = [];
   for ($i = 0; $i < count($results); $i++) {
     array_push($workspaces, $results[$i]['workspace_id']);

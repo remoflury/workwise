@@ -48,7 +48,7 @@ function renderBookingWorkspaces(data, wrapper) {
     dateElem.textContent = 'Mietdatum: ' + workspace[8];
     userElem.textContent = 'Vermieter: ' + workspace[9];
 
-    imgElem.classList.add('aspect-video', 'object-cover')
+    imgElem.classList.add('aspect-video', 'object-cover', 'w-full')
     dateElem.classList.add('mt-4')
 
     workspaceElem.appendChild(titleElem);
