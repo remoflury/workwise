@@ -90,12 +90,13 @@ function updateWorkspace(workspaceElem, workspaceData) {
 
   
   // check for empty inputs
-  const inputValues = [objectname, imageUrl];
+  const inputValues = [objectname, imageUrl, imageUrl, description, address, price, date, workspaceID];
   if (inputFieldsEmpty(inputValues)) {
     createErrorMessage(workspaceElem, "Bitte alle erforderlichen Felder ausfüllen.")
     return;
   }
   
+  // check for empty radio buttons
   if (checkEmptyRadionButtons(statusOnline, statusOffline)) {
     createErrorMessage(workspaceElem, "Bitte den Status (online / offline) setzen.")
     return;
@@ -119,7 +120,6 @@ function updateWorkspace(workspaceElem, workspaceData) {
   formData.append('price', price);
   formData.append('date', date);
   formData.append('workspaceid', workspaceID);
-
 
   // fetche backend
   fetch(`${baseUrl}/backend/editWorkspace.php`,
