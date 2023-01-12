@@ -51,8 +51,13 @@
 
   p,
   button,
-  article {
+  article,
+  a {
     @apply text-base md:text-lg xl:text-xl text-current
+  }
+
+  a {
+    @apply hover:opacity-80 transition
   }
 
   p.lead {
