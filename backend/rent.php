@@ -15,7 +15,39 @@ $sql = "INSERT INTO rentals (workspace_id, mieter_users_id, vermieter_users_id) 
 
 $stmt = $pdo->prepare($sql);
 
-// Statement ausführen.
+// Statement ausführen
 $success = $stmt->execute(array('WorkspaceId' => $workspaceId, 'Mieter' => $mieter, 'Vermieter' => $vermieter));
 
-echo $success;
+if ($success) {
+
+  changeStatusRented($workspaceId);
+
+} else {
+  echo '{
+    "error": true,
+    "message": "Ups, da lief etwas schief. Bitte lade die Seite neu und versuche es noch einmal."
+  }';
+}
+
+
+function changeStatusRented($workspaceId) {
+  require 'config.php';
+
+  // set status of rented workspace to 1 (= true, equals ' vermietet ') in DB
+  $sql = "UPDATE workspaces SET rented=? WHERE ID = ?";
+  $stmt = $pdo->prepare($sql);
+
+  $success = $stmt->execute(["1", $workspaceId]);
+  if ($success) {
+    echo '{
+      "error": false,
+      "message": "Erfolgreich gebucht"
+    }'; 
+
+  } else {
+    echo '{
+      "error": true,
+      "message": "Ups, da lief etwas schief. Bitte lade die Seite neu und versuche es noch einmal."
+    }';
+  }
+}
