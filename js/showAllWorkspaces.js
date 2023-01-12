@@ -26,14 +26,15 @@ function showAllWorkspaces() {
       }
       else {
         const showStatus = false;
+        const renderRentBtn = true;
         console.log(data);
-        renderWorkspaceCard(data, workspacesWrapper, false);
+        renderWorkspaceCard(data, workspacesWrapper, showStatus, renderRentBtn);
       }
     })
 }
 
 // Funktion um Workspace-Cards zu rendern
-function renderWorkspaceCard(data, wrapper, showStatus) {
+function renderWorkspaceCard(data, wrapper, showStatus, renderRentBtn = false) {
   for (let i = 0; i < data.length; i++) {
     // escape logged in status
     if (i + 1 == data.length) {
@@ -96,8 +97,8 @@ function renderWorkspaceCard(data, wrapper, showStatus) {
     if (showStatus) {
       editWorkspace(workspaceElem, data[i])
     }
-
-    renderRentButton(workspaceElem, data[i][0])
-  // })
+    if (renderRentBtn) {
+      renderRentButton(workspaceElem, data[i][0])
+    }
   }
 }

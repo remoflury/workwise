@@ -16,6 +16,7 @@ function showMyWorkspaces() {
   .then((data) => {
     workspaceWrapper = document.getElementById('my-workspaces')
     const showStatus = true;
+    // const renderRentBtn = true;
     renderWorkspaceCard(data, workspaceWrapper, showStatus)
     console.log(data)
   })
