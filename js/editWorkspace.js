@@ -18,19 +18,6 @@ function editWorkspace(workspaceElem, workspace) {
 
   btn.addEventListener('click', () => {
     workspaceElem.classList.toggle('min-w-full')
-    // ToDo 
-    // let online = false;
-    // let offline = false;
-
-    // if (workspace[3] == 'online') {
-    //   online = true;
-    // } else {
-    //   offline = true;
-    // }
-
-    // console.log('online', online)
-    // console.log('offline', offline)
-
 
     // input fields statt statische Elemente anzeigen
     workspaceElem.innerHTML = `

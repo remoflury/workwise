@@ -1,5 +1,10 @@
 <?php 
 
+if (!isset($_POST['submit'])) {
+  header('location: login.php');
+  exit();
+}
+
 require 'config.php';
 
 $email = $_POST['email'];
