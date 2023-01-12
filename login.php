@@ -24,7 +24,7 @@
       <section>
         <h1>Login</h1>
 
-        <div class="">
+        <div class="form-wrapper">
 
           <div class="my-2">
             <label for="email">Email</label>

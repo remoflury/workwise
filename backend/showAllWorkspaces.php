@@ -20,6 +20,13 @@ if ($success) {
   $results = $stmt->fetchAll();
 
   // gibt array als json zurück
+  session_start();
+  $loggedIn = [false];
+  if (isset($_SESSION['userId'])) {
+    $loggedIn = [true];
+  }
+
+  $results = array_merge($results, $loggedIn);
   echo json_encode($results);
 } else {
   echo '{
