@@ -22,7 +22,7 @@
     <main class="container">
       <!-- Hier kommt der Main Content -->
       <section>
-        <h1>Meine Vermietungen</h1>
+        <h1>Meine Buchungen</h1>
         <input type="hidden" name="userId" id="user-id" value="<?php echo $_SESSION['userId'] ?>">
       </section>
     </main>
