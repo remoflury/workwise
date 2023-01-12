@@ -5,6 +5,7 @@ if (!isset($_POST['submit'])) {
   header('location: /');
   exit();
 }
+require 'config.php';
 
 $workspaceId = $_POST['workspaceId'];
 
