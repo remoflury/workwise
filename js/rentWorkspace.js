@@ -10,3 +10,22 @@ function renderRentButton(workspaceElem, workspaceId) {
     window.location.href = `/rentworkspace.php?workspaceId=${workspaceId}`
   })
 }
+
+function rentWorkspace() {
+  const workspaceId = document.querySelector('#workspace-id').value;
+
+  let formData = new FormData();
+  formData.append('submit', true)
+  formData.append('workspaceId', workspaceId)
+
+  fetch(`${baseUrl}/backend/rentWorkspace.php`, {
+    body: formData,
+    method: "post"
+  })
+    .then((response) => {
+      return response.text();
+    })
+    .then((data) => {
+      console.log(data)
+    })
+}
