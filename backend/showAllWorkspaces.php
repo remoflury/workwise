@@ -6,11 +6,16 @@ if(!isset($_POST['submit'])) {
   exit();
 }
 
+$online = 'online';
+$rented = '0';
+
 require 'config.php';
 
 // select alle inserate von DB, die online und nicht vermietet sind
-$sql = "SELECT * FROM workspaces WHERE (status = 'online' AND rented = '0') ORDER BY ID DESC";
+$sql = "SELECT * FROM workspaces WHERE (status = :Status AND rented = :Rented) ORDER BY ID DESC";
 $stmt = $pdo->prepare($sql);
+$stmt->bindParam(":Status", $online);
+$stmt->bindParam(":Rented", $rented);
 
 $success = $stmt->execute();
 

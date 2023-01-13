@@ -14,16 +14,10 @@ $sql = "
   FROM workspaces
   INNER JOIN rentals ON workspaces.users_id = rentals.vermieter_users_id
   INNER JOIN users ON rentals.mieter_users_id = users.ID
-  WHERE rentals.vermieter_users_id = '$vermieter'
+  WHERE rentals.vermieter_users_id = :Vermieter
 ";
-// $sql = "
-//   SELECT workspaces.*, rentals.*
-//   FROM workspaces
-//   INNER JOIN rentals ON workspaces.users_id = rentals.vermieter_users_id
-//   WHERE rentals.vermieter_users_id = '$vermieter'
-// ";
-
 $stmt = $pdo->prepare($sql);
+$stmt->bindParam(":Vermieter", $vermieter);
 $success = $stmt->execute();
 
 //falls DB Statement failt

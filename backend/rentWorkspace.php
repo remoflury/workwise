@@ -9,8 +9,9 @@ require 'config.php';
 
 $workspaceId = $_POST['workspaceId'];
 
-$sql = "SELECT * FROM workspaces WHERE ID = '$workspaceId'";
+$sql = "SELECT * FROM workspaces WHERE ID = :WorkspaceId";
 $stmt = $pdo->prepare($sql);
+$stmt->bindParam(":WorkspaceId", $workspaceId);
 
 $success = $stmt->execute();
 

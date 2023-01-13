@@ -9,8 +9,9 @@ $userId = $_POST['userId'];
 
 require 'config.php';
 
-$sql = "SELECT * FROM rentals WHERE mieter_users_id = '$userId'";
+$sql = "SELECT * FROM rentals WHERE mieter_users_id = :UserId";
 $stmt = $pdo->prepare($sql);
+$stmt->bindParam(":UserId", $userId);
 
 $success = $stmt->execute();
 
@@ -38,8 +39,9 @@ function selectBookedWorkplaces($workspaces) {
   $workspaces = join("','",$workspaces); 
 
   // selektiere alle workspaces von mieter, welche mieter gebucht hat
-  $sql = "SELECT * FROM workspaces WHERE ID IN ('$workspaces')";
+  $sql = "SELECT * FROM workspaces WHERE ID IN (:Workspaces)";
   $stmt = $pdo->prepare($sql);
+  $stmt->bindParam(":Workspaces", $workspaces);
 
   $success = $stmt->execute();
 

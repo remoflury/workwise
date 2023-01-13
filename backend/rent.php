@@ -10,8 +10,9 @@ $workspaceId = $_POST['workspaceId'];
 $mieter = $_POST['mieter'];
 $vermieter = $_POST['vermieter'];
 
-$sql = "SELECT * FROM rentals WHERE workspace_id = '$workspaceId'";
+$sql = "SELECT * FROM rentals WHERE workspace_id = :WorkspaceId";
 $stmt = $pdo->prepare($sql);
+$stmt->bindParam(":WorkspaceId", $workspaceId);
 
 $success = $stmt->execute();
 

@@ -11,9 +11,9 @@ $email = $_POST['email'];
 $password = $_POST['password'];
 
 // check, if user exists
-$sql = "SELECT * FROM users WHERE email = '$email'";
+$sql = "SELECT * FROM users WHERE email = :Email";
 $stmt = $pdo->prepare($sql);
-
+$stmt->bindParam(":Email", $email);
 $success = $stmt->execute();
 
 // wenn DB Statement erfolgreich

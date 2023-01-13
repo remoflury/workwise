@@ -10,9 +10,9 @@ session_start();
 $userId = $_SESSION['userId'];
 
 // select alle inserate von DB, die online online sind
-$sql = "SELECT * FROM workspaces WHERE users_id = '$userId'";
+$sql = "SELECT * FROM workspaces WHERE users_id = :UserId";
 $stmt = $pdo->prepare($sql);
-
+$stmt->bindParam(':UserId', $userId);
 $success = $stmt->execute();
 
 // wenn statement erfolgreich

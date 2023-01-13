@@ -16,8 +16,9 @@ $password = $_POST["password"];
 $passwordHashed = password_hash($password, PASSWORD_DEFAULT);
 
 // check if user already exist
-$sql = "SELECT email FROM users WHERE email = '$email'";
+$sql = "SELECT email FROM users WHERE email = :Email";
 $stmt = $pdo->prepare($sql);
+$stmt->bindParam(":Email", $email);
 
 $success = $stmt->execute();
 
