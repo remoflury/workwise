@@ -38,5 +38,5 @@ if (isset($_SESSION['userId'])) {
 }
 
 // merge loggin status mit den resultaten, um auf der Startseite den Loginstatus auslesen zu können
-$results = array_merge($results, $loggedIn);
+$results = array_merge($loggedIn, $results);
 echo json_encode($results);
