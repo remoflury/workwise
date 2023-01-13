@@ -22,9 +22,7 @@ function showMyBookings() {
 
     // wenn fehler zurückkommt
     if (data.error === true) {
-      messageElem.textContent = data.message;
-      messageElem.classList.add('bg-red-500', 'text-white', 'px-4', 'py-2', 'mt-8' );
-      myBookingsWrapper.appendChild(messageElem);
+      createErrorMessage(myBookingsWrapper, data.message)
       return;
     }
 
