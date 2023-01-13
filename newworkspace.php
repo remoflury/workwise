@@ -1,5 +1,8 @@
 <?php 
   require 'backend/auth.php';
+  if (!$_SESSION['userId']) {
+    header('location: /');
+  }
 ?>
 
 <!DOCTYPE html>
