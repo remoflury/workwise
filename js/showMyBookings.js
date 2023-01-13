@@ -41,10 +41,10 @@ function renderBookingWorkspaces(data, wrapper) {
     const dateElem = document.createElement('p');
     const userElem = document.createElement('p');
 
-    titleElem.textContent = workspace[2];
-    imgElem.src = workspace[4];
-    dateElem.textContent = 'Mietdatum: ' + workspace[8];
-    userElem.textContent = 'Vermieter: ' + workspace[9];
+    titleElem.textContent = workspace.objectname;
+    imgElem.src = workspace.imageurl;
+    dateElem.textContent = 'Mietdatum: ' + workspace.date;
+    userElem.textContent = 'Vermieter: ' + workspace.username;
 
     imgElem.classList.add('aspect-video', 'object-cover', 'w-full')
     dateElem.classList.add('mt-4')
