@@ -18,16 +18,12 @@ function showMyRentals() {
   .then((data) => {
     console.log(data);
     const myRentalsWrapper = document.querySelector('#my-rentals-wrapper');
-    const messageElem = document.createElement('article');
 
     // wenn fehler zurückkommt
     if (data.error === true) {
-      messageElem.textContent = data.message;
-      messageElem.classList.add('bg-red-500', 'text-white', 'px-4', 'py-2', 'mt-8' );
-      myRentalsWrapper.appendChild(messageElem);
+      createErrorMessage(myRentalsWrapper, data.message)
       return;
     }
-
     renderRentalWorkspaces(data, myRentalsWrapper);
 
     myRentalsWrapper.classList.add('flex', 'flex-wrap', 'gap-12', 'justify-center')
@@ -44,9 +40,9 @@ function renderRentalWorkspaces(data, wrapper) {
     const dateElem = document.createElement('p');
     const userElem = document.createElement('p');
 
-    titleElem.textContent = workspace[2];
-    imgElem.src = workspace[4];
-    dateElem.textContent = 'Mietdatum: ' + workspace[8];
+    titleElem.textContent = workspace.objectname;
+    imgElem.src = workspace.imageurl;
+    dateElem.textContent = 'Mietdatum: ' + workspace.date;
     // userElem.textContent = 'Mieter: ' + workspace[9];
 
     imgElem.classList.add('aspect-video', 'object-cover', 'w-full')

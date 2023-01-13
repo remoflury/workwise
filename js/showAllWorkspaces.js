@@ -37,7 +37,7 @@ function renderWorkspaceCard(data, wrapper, showStatus, renderRentBtn = false) {
 
   for (let i = 0; i < data.length; i++) {
     // escape logged in status
-    if (i + 1 == data.length) {
+    if (i + 1 == data.length && i !== 0) {
       return;
     }
 
