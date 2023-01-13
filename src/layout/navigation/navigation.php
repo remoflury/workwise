@@ -6,12 +6,12 @@
     </a>
 
     <!-- Hamburger -->
-    <button 
+    <div role="button"
       id="hamburger"
       class="lg:hidden w-12 h-8 relative flex flex-col justify-between"
       aria-expanded="false">
       <?php include_once 'hamburger.php' ?>
-    </button>
+    </div>
 
     <!-- Menu Mobile -->
     <?php include 'menuMobile.php';?>

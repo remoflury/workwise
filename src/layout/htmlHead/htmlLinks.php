@@ -1,5 +1,5 @@
 <!-- Favicon -->
-<link rel="icon" type="image/x-icon" href="src/assets/favicon/Favicon WorkWise_v2.svg">
+<link rel="icon" type="image/x-icon" href="src/assets/favicon/Favicon_WorkWise_v2.svg">
   
 <!-- CSS -->
 <link rel="stylesheet" href="css/output.css">
