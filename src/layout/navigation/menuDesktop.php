@@ -24,7 +24,7 @@
     </li>
   <?php } else { ?>
     <li>
-      <p class="cursor-pointer text-xl text-center"><a href="contact.php">Kontakt</a></p>
+      <p class="cursor-pointer text-xl text-center"><a href="dummysite.php">Kontakt</a></p>
     </li>
   <?php } ?>
   <li>
