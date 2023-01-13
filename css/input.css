@@ -101,4 +101,8 @@
   .form-wrapper {
     @apply sm:max-w-3/4 md:max-w-1/2 mx-auto
   }
+
+  input[type="radio"] {
+    @apply form-radio text-orange-dark focus-within:ring-0
+  }
 }

@@ -32,7 +32,7 @@
           <div class="my-4">
             <label class="block">Status *</label>
             <label for="status">Online</label>
-            <input type="radio" name="status" id="online" >
+            <input type="radio" name="status" id="online">
             <label class="ml-4 "for="status">Offline</label>
             <input type="radio" name="status" id="offline">
           </div>

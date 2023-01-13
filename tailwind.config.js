@@ -34,5 +34,7 @@ module.exports = {
       '3/4': '75%',
     }
   },
-  plugins: [],
+  plugins: [
+    require('@tailwindcss/forms'),
+  ],
 }
