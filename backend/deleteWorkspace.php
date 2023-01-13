@@ -24,5 +24,5 @@ if (!$success) {
 
 echo '{
     "error": true
-    "message": "Ups, da war the Dark Force im Spiel. Bitte versuche es später noch einmal."
+    "message": "Erfolgreich gelöscht."
 }';

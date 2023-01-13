@@ -56,7 +56,49 @@ function renderBookingWorkspaces(data, wrapper) {
     workspaceElem.appendChild(userElem);
 
     workspaceElem.classList.add('shadow-card', 'p-4', 'max-w-[40ch]', 'lg:max-w-[45ch]')
+    
+    // button stornieren
+    cancelBooking(workspaceElem, workspace.workspace_id)
 
     wrapper.appendChild(workspaceElem)
+
+    
+  })
+}
+
+function cancelBooking(parentWrapper, workspaceId) {
+  const btnCancel = document.createElement('button');
+  btnCancel.textContent = 'Buchung stornieren';
+  addStylingToBtn(btnCancel);
+  parentWrapper.appendChild(btnCancel);
+
+  // redirect to site with workspace id 
+  btnCancel.addEventListener('click', () => {
+    let formData = new FormData();
+    formData.append('submit', true);
+    formData.append('workspaceId', workspaceId)
+
+    if (confirm("Willst diese Workspace-Buchung wirklich stornieren?")) {
+
+      fetch(`${baseUrl}/backend/cancelBooking.php`,{
+        body: formData,
+        method: "post"
+      }) 
+        .then((response) => {
+          return response.json()
+        })
+  
+        .then((data) => {
+
+          if (data.error === true) {
+            const messageElem = document.createElement('div');
+            parentWrapper.appendChild(messageElem);
+            createErrorMessage(messageElem, data.message);
+            return;
+          }
+
+          window.location.reload();
+        })
+    }
   })
 }
