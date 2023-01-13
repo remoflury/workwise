@@ -43,7 +43,7 @@ function renderRentalWorkspaces(data, wrapper) {
     titleElem.textContent = workspace.objectname;
     imgElem.src = workspace.imageurl;
     dateElem.textContent = 'Mietdatum: ' + workspace.date;
-    // userElem.textContent = 'Mieter: ' + workspace[9];
+    userElem.textContent = 'Mieter: ' + workspace.username;
 
     imgElem.classList.add('aspect-video', 'object-cover', 'w-full')
     dateElem.classList.add('mt-4')
