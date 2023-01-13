@@ -38,7 +38,7 @@ function renderWorkspaceCard(data, wrapper, showStatus, renderRentBtn = false) {
     breakpoint: {
 
       // escape logged in status
-      if (i == 0) {
+      if (i == 0 && (data[i] === false || data[i] === true)) {
         break breakpoint;
       }
       // creating Elements
