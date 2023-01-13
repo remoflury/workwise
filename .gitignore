@@ -1,3 +1,5 @@
 .vscode/
 node_modules
 backend/config.php
+*.zip
+.DS_Store
