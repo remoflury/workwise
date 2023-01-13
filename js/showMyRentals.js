@@ -24,6 +24,11 @@ function showMyRentals() {
       createErrorMessage(myRentalsWrapper, data.message)
       return;
     }
+
+    if (data.length === 0) {
+      createErrorMessage(myRentalsWrapper, "Du hast leider noch keine deiner Workspaces vermietet.")
+      return;
+    }
     renderRentalWorkspaces(data, myRentalsWrapper);
 
     myRentalsWrapper.classList.add('flex', 'flex-wrap', 'gap-12', 'justify-center')
