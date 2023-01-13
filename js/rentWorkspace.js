@@ -5,7 +5,7 @@ function renderRentButton(workspaceElem, workspaceId) {
   addStylingToBtn(btnRent);
   workspaceElem.appendChild(btnRent);
 
-  // console.log(workspaceId)
+  // redirect to site with workspace id 
   btnRent.addEventListener('click', () => {
     window.location.href = `/rentworkspace.php?workspaceId=${workspaceId}`
   })

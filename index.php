@@ -18,8 +18,8 @@
     <?php include 'src/layout/header.php';?>
 
     <main class="container">
-      <!-- Wenn nicht eingeloggt -->
       <?php if (!isset($_SESSION['userId'])) { ?>
+        <!-- Wenn nicht eingeloggt -->
         <section>
           <h1 class="mb-12">Welcome to Workwise</h1>
           <p class="lead mb-12 md:max-w-3/4 xl:max-w-1/2">Hast du ein Heimbüro, das du tagsüber nicht brauchst? Oder suchst du ein Büro, dass du schnell und einfach tageweise mieten kannst? Dann registriere dich jetzt bei Workwise.</p>
@@ -34,16 +34,17 @@
         </section>
       <?php } ?>
 
-      <!-- Wenn eingeloggt -->
       <?php if (isset($_SESSION['userId'])) { ?>
+        <!-- Wenn eingeloggt -->
         <section>
-          <h1>Workwise</h1>
+          <h1>Workwise!</h1>
           <p class="text-3xl md:text-4xl xl:text-5xl font-bold opacity-60">Hallo <?php echo $_SESSION['username']?></p>
+          <input type="hidden" name="userid" id="userId" value="<?php echo $_SESSION['userId']?>">
         </section>
       <?php } ?>
 
       <section id="workspaces" class="flex flex-wrap gap-8 lg:gap-12 items-start justify-center">
-        <h2>Vergügbare Workspaces</h2>
+        <h2>Verfügbare Workspaces</h2>
       </section>
 
     </main>

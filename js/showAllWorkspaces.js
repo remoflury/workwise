@@ -1,5 +1,4 @@
 function showAllWorkspaces() {
-  
 
   let formData = new FormData();
   formData.append('submit', true);
@@ -35,12 +34,12 @@ function showAllWorkspaces() {
 
 // Funktion um Workspace-Cards zu rendern
 function renderWorkspaceCard(data, wrapper, showStatus, renderRentBtn = false) {
+
   for (let i = 0; i < data.length; i++) {
     // escape logged in status
     if (i + 1 == data.length) {
       return;
     }
-
 
     // creating Elements
     const workspaceElem = document.createElement('article');
@@ -82,6 +81,7 @@ function renderWorkspaceCard(data, wrapper, showStatus, renderRentBtn = false) {
     // styling
     image.classList.add('aspect-video', 'w-full', 'h-full', 'mb-6', 'object-cover')
 
+    // appending elems
     workspaceElem.appendChild(objectName);
     workspaceElem.appendChild(image);
     workspaceElem.appendChild(description);
@@ -91,12 +91,13 @@ function renderWorkspaceCard(data, wrapper, showStatus, renderRentBtn = false) {
     workspaceElem.appendChild(user);
     workspaceElem.classList.add('p-4', 'shadow-card', 'mb-8', 'last:mb-0', 'max-w-[40ch]', 'lg:max-w-[45ch]')
     wrapper.append(workspaceElem);
-    image.src = data[i][4];
 
     // wenn alle inserate angezeigt werden sollen, dann..
     if (showStatus) {
       editWorkspace(workspaceElem, data[i])
     }
+
+    // für Startseite: Jetzt mieten Button
     if (renderRentBtn) {
       renderRentButton(workspaceElem, data[i][0])
     }

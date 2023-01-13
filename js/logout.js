@@ -10,7 +10,7 @@ function logout() {
     })
 
     .then((response) => {
-      return response.text();
+      return response.json();
     })
     .then((data) => {
       
