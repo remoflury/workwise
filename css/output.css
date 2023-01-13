@@ -907,7 +907,7 @@ h5 {
 p,
   button,
   article,
-  a, {
+  a {
   font-size: 1rem;
   line-height: 1.5rem;
   color: currentColor;
@@ -917,7 +917,7 @@ p,
   p,
   button,
   article,
-  a, {
+  a {
     font-size: 1.125rem;
     line-height: 1.75rem;
   }
@@ -927,7 +927,7 @@ p,
   p,
   button,
   article,
-  a, {
+  a {
     font-size: 1.25rem;
     line-height: 1.75rem;
   }
@@ -3081,14 +3081,14 @@ input[type="radio"]:focus-within {
   line-height: 2rem;
 }
 
-.text-xl {
-  font-size: 1.25rem;
-  line-height: 1.75rem;
-}
-
 .text-base {
   font-size: 1rem;
   line-height: 1.5rem;
+}
+
+.text-xl {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
 }
 
 .font-bold {

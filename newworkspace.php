@@ -61,7 +61,7 @@
             <label for="date">Verfügbarkeit *</label>
             <input type="date" name="date" id="date">
           </div>
-          <div class="mt-8">
+          <div class="mt-8" id="btn-submit">
             <?php 
               $btnText ="Erstellen";
               $onClickFunction = "createWorkspace()";

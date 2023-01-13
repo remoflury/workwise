@@ -7,6 +7,25 @@ function createWorkspace() {
   const address = document.querySelector('#address').value;
   const price = document.querySelector('#price').value;
   const date = document.querySelector('#date').value;
+
+  const messageElem = document.querySelector('#message');
+  messageElem.innerHTML = '';
+
+  // check for empty inputs
+  const inputValues = [objectname, imageUrl, imageUrl, description, address, price, date];
+  if (inputFieldsEmpty(inputValues)) {
+    createErrorMessage(messageElem, "Bitte alle erforderlichen Felder ausfüllen.")
+    return;
+  }
+  
+  // check for empty radio buttons
+  if (checkEmptyRadionButtons(statusOnline, statusOffline)) {
+    createErrorMessage(messageElem, "Bitte den Status (online / offline) setzen.")
+    return;
+  }
+
+  if (messageElem.querySelector('#message')) messageElem.querySelector('#message').remove();
+
   let status;
   if (statusOnline === true) {
     status = "online"
@@ -37,11 +56,14 @@ function createWorkspace() {
     })
     .then((data) => {
       console.log(data)
-      const messageElem = document.querySelector('#message');
-      
+      const btnSubmit = document.querySelector('#btn-submit button');
+
       // zeige nachricht in Article an
       messageElem.textContent = data.message;
       window.location.href = 'newworkspace.php#message'
+
+      // remove btnSubmit, um zweites Submitten zu verhindern
+      btnSubmit.remove();
 
       // wenn kein error, dann style so
       if (data.error === false) {
