@@ -907,7 +907,7 @@ h5 {
 p,
   button,
   article,
-  a {
+  a, {
   font-size: 1rem;
   line-height: 1.5rem;
   color: currentColor;
@@ -917,7 +917,7 @@ p,
   p,
   button,
   article,
-  a {
+  a, {
     font-size: 1.125rem;
     line-height: 1.75rem;
   }
@@ -927,7 +927,7 @@ p,
   p,
   button,
   article,
-  a {
+  a, {
     font-size: 1.25rem;
     line-height: 1.75rem;
   }
@@ -3086,6 +3086,11 @@ input[type="radio"]:focus-within {
   line-height: 1.75rem;
 }
 
+.text-base {
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+
 .font-bold {
   font-weight: 700;
 }
@@ -3674,16 +3679,6 @@ input[type="radio"]:focus-within {
   text-align: center;
 }
 
-.group:hover .group-hover\:bg-white {
-  --tw-bg-opacity: 1;
-  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
-}
-
-.group:hover .group-hover\:text-orange-dark {
-  --tw-text-opacity: 1;
-  color: rgb(176 126 9 / var(--tw-text-opacity));
-}
-
 @media (min-width: 640px) {
   .sm\:container {
     width: 100%;
@@ -3815,6 +3810,11 @@ input[type="radio"]:focus-within {
     font-size: 2.25rem;
     line-height: 2.5rem;
   }
+
+  .md\:text-lg {
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+  }
 }
 
 @media (min-width: 1024px) {
@@ -3898,5 +3898,10 @@ input[type="radio"]:focus-within {
   .xl\:text-5xl {
     font-size: 3rem;
     line-height: 1;
+  }
+
+  .xl\:text-xl {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
   }
 }
