@@ -2,9 +2,9 @@
   <li class="relative "data-desktop-expandable-menu aria-expanded="false">
     <p class="flex gap-x-2 items-center cursor-pointer text-xl">Informationen<img class="h-[1.5em] transition" src="/src/assets/icons/chevron-right-white.png" alt="Design Element"></p>
     <ul class="bg-black p-4 absolute top-full left-0 hidden min-w-full">
-      <li><a href="/">Vermieten</a></li>
-      <li class="pt-2"><a href="/">Mieten</a></li>
-      <li class="pt-2"><a href="/">FAQ</a></li>
+      <li class="pt-2"><a href="dummysite.php">Vermieten</a></li>
+      <li class="pt-2"><a href="dummysite.php">Mieten</a></li>
+      <li class="pt-2"><a href="dummysite.php">FAQ</a></li>
     </ul>
   </li>
   <!-- wenn eingeloggt -->
@@ -18,21 +18,15 @@
         <li class="pt-2"><a href="/">Abrechnungen</a></li>
       </ul>
     </li>
-    <li class="relative "data-desktop-expandable-menu>
-      <p class="flex gap-x-2 items-center cursor-pointer text-xl">Profil<img class="h-[1.5em] transition" src="/src/assets/icons/chevron-right-white.png" alt="Design Element"></p>
-      <ul class="bg-black p-4 absolute top-full left-0 hidden min-w-full">
-        <li><a href="/">Profileinstellungen</a></li>
-        <li class="pt-2"><a href="/">Zahlungsmittel</a></li>
-        <li class="pt-2"><a href="/">Kontoverbindung</a></li>
-        <li class="pt-2"><a href="myworkspaces.php">Meine Inserate</a></li>
-      </ul>
+    <li>
+      <p class="cursor-pointer text-xl text-center"><a href="myworkspaces.php">Meine Inserate</a></p>
     </li>
-    <li class="relative">
-      <p class="cursor-pointer text-xl"><a href="newworkspace.php">Inserat hinzufügen</a></p>
+    <li>
+      <p class="cursor-pointer text-xl text-center"><a href="newworkspace.php">Inserat hinzufügen</a></p>
     </li>
   <?php } else { ?>
-    <li class="relative">
-      <p class="cursor-pointer text-xl"><a href="contact.php">Kontakt</a></p>
+    <li>
+      <p class="cursor-pointer text-xl text-center"><a href="contact.php">Kontakt</a></p>
     </li>
   <?php } ?>
   <li>

@@ -5,9 +5,9 @@
         <li data-clickable-menu>
           <p class="flex gap-x-4 items-center text-xl font-semibold cursor-pointer">Informationen<img class="h-[2em] transition" src="/src/assets/icons/chevron-right.png" alt="Design Element"></p>
           <ul class="hidden pl-4 pb-2" data-expanding-menu>
-            <li class="text-xl"><a href="/">Vermieten</a></li>
-            <li class="text-xl"><a href="/">Mieten</a></li>
-            <li class="text-xl"><a href="/">FAQ</a></li>
+            <li class="text-xl"><a href="dummysite.php">Vermieten</a></li>
+            <li class="text-xl"><a href="dummysite.php">Mieten</a></li>
+            <li class="text-xl"><a href="dummysite.php">FAQ</a></li>
           </ul>
         </li>
         <!-- wenn eingeloggt -->
@@ -15,20 +15,12 @@
         <li data-clickable-menu>
           <p class="flex gap-x-4 items-center text-xl font-semibold cursor-pointer">Buchungen<img class="h-[2em] transition" src="/src/assets/icons/chevron-right.png" alt="Design Element"></p>
           <ul class="hidden pl-4 pb-2" data-expanding-menu>
-            <li class="text-xl"><a href="/">Messages</a></li>
             <li class="text-xl"><a href="myrentals.php">Meine Vermietungen</a></li>
             <li class="text-xl"><a href="mybookings.php">Meine Buchungen</a></li>
-            <li class="text-xl"><a href="/">Abrechnung</a></li>
           </ul>
         </li>
-        <li data-clickable-menu>
-          <p class="flex gap-x-4 items-center text-xl font-semibold cursor-pointer">Profil<img class="h-[2em] transition" src="/src/assets/icons/chevron-right.png" alt="Design Element"></p>
-          <ul class="hidden pl-4 pb-2" data-expanding-menu>
-            <li class="text-xl"><a href="/">Profileinstellungen</a></li>
-            <li class="text-xl"><a href="/">Zahlungsmittel</a></li>
-            <li class="text-xl"><a href="/">Kontoverbindung</a></li>
-            <li class="text-xl"><a href="myworkspaces.php">Meine Inserate</a></li>
-          </ul>
+        <li>
+          <p class="text-xl font-semibold"><a href="myworkspaces.php">Meine Inserate</a></p>
         </li>
         <li class="text-xl font-semibold "><a href="newworkspace.php">Inserat hinzufügen</a></li>
         <?php } else { ?>
