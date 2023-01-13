@@ -9,10 +9,10 @@ require 'config.php';
 
 $workspaceId = $_POST['workspaceid'];
 
-$sql = "DELETE FROM workspaces WHERE ID = ?";
+$sql = "DELETE FROM workspaces WHERE ID = :WorkspaceId";
 $stmt = $pdo->prepare($sql);
-
-$success = $stmt->execute([$workspaceId]);
+$stmt->bindParam(":WorkspaceId", $workspaceId);
+$success = $stmt->execute();
 
 
 if ($success) {

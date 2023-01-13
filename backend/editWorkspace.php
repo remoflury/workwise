@@ -15,22 +15,27 @@ $address = $_POST['address'];
 $price = $_POST['price'];
 $date = $_POST['date'];
 $workspaceId = $_POST['workspaceid'];
-session_start();
-// $userId = $_SESSION['userId'];
-// $username = $_SESSION['username'];
 
-$sql = "UPDATE workspaces SET objectname=?, status=?, imageurl=?, description=?, address=?, price=?, date=? WHERE ID=?";
+$sql = "UPDATE workspaces SET objectname=:ObjectName, status=:Status, imageurl=:ImageUrl, description=:Description, address=:Address, price=:Price, date=:Date WHERE ID=:ID";
 $stmt = $pdo->prepare($sql);
+$stmt->bindParam(":ObjectName", $objectName);
+$stmt->bindParam(":Status", $status);
+$stmt->bindParam(":ImageUrl", $imageUrl);
+$stmt->bindParam(":Description", $description);
+$stmt->bindParam(":Address", $address);
+$stmt->bindParam(":Price", $price);
+$stmt->bindParam(":Date", $date);
+$stmt->bindParam(":ID", $workspaceId);
 
-$success = $stmt->execute([$objectName, $status, $imageUrl, $description, $address, $price, $date, $workspaceId]);
+$success = $stmt->execute();
 
-if ($success) {
-    echo '{
-        "error": false
-    }';
-} else {
+if (!$success) {
     echo '{
         "error": true,
         "message": "Ups, da lief etwas schief. Bitte lade die Seite neu und versuche es noch einmal."
     }';
-}
+} 
+
+echo '{
+    "error": false
+}';

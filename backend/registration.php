@@ -43,9 +43,14 @@ if ($success) {
 
 
 // Statement um user in DB einzufügen (registration)
-$sql = "INSERT INTO users (username, email, password) VALUES (:Username, :Email, :Password)";
-
+$sql = "
+  INSERT INTO users (username, email, password)
+  VALUES (:Username, :Email, :Password)
+";
 $stmt = $pdo->prepare($sql);
+$stmt->bindParam(":Username", $username);
+$stmt->bindParam(":Email", $email);
+$stmt->bindParam(":Password", $passwordHashed);
 
 // Statement ausführen.
 $erfolg = $stmt->execute(array('Username' => $username, 'Email' => $email, 'Password' => $passwordHashed));

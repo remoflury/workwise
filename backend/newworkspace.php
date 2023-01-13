@@ -18,10 +18,22 @@ $username = $_SESSION['username'];
 
 require('config.php');
 
-$sql = "INSERT INTO workspaces (users_id, objectname, status, imageurl, description, address, price, date, users_username) VALUES (:UserID, :ObjectName, :Status, :ImageUrl, :Description, :Address, :Price, :Date, :Username)";
+$sql = "
+  INSERT INTO workspaces (users_id, objectname, status, imageurl, description, address, price, date, users_username) 
+  VALUES (:UserID, :ObjectName, :Status, :ImageUrl, :Description, :Address, :Price, :Date, :Username)
+";
 $stmt = $pdo->prepare($sql);
+$stmt->bindParam(":UserId", $userId);
+$stmt->bindParam(":ObjectName", $objectName);
+$stmt->bindParam(":Status", $status);
+$stmt->bindParam(":ImageUrl", $imageUrl);
+$stmt->bindParam(":Description", $description);
+$stmt->bindParam(":Address", $address);
+$stmt->bindParam(":Price", $price);
+$stmt->bindParam(":Date", $date);
+$stmt->bindParam(":Username", $username);
 
-$erfolg = $stmt->execute(array('UserID' => $userId, 'ObjectName' => $objectName, 'Status' => $status, 'ImageUrl' => $imageUrl, 'Description' => $description, 'Address' => $address, 'Price' => $price, 'Date' => $date, 'Username' => $username));
+$erfolg = $stmt->execute();
 
 if ($erfolg) {
 
