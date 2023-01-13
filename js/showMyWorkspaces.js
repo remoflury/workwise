@@ -15,8 +15,10 @@ function showMyWorkspaces() {
   
   .then((data) => {
     workspaceWrapper = document.getElementById('my-workspaces')
+    if (data.length === 0) {
+      createErrorMessage(workspaceWrapper, "Du hast noch keine Workspace-Inserate erfasst.")
+    }
     const showStatus = true;
-    // const renderRentBtn = true;
     renderWorkspaceCard(data, workspaceWrapper, showStatus)
     console.log(data)
   })
