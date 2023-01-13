@@ -8,12 +8,10 @@ function login() {
   // check for empty input
   const inputValues = [email, password];
   if (inputFieldsEmpty(inputValues)) {
-    messageElem.textContent = 'Fülle bitte alle erforderlichen Felder aus.';
-    messageElem.classList.add('bg-red-500', 'text-white', 'px-4', 'py-2', 'mt-8' )
+    createErrorMessage(messageElem, "Bitte alle erforderlichen Felder ausfüllen.")
     return;
   }
 
-  // TODO: check if empty
   let formData = new FormData();
   formData.append('submit', true)
   formData.append('email', email);

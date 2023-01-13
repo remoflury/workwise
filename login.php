@@ -33,7 +33,7 @@
           
           <div class="my-4">
             <label for="password">Password *</label>
-            <input type="password" name="password" id="password" placeholder="min. 8 Zeichen">
+            <input type="password" name="password" id="password">
           </div>
           <div class="mt-8">
             <?php 
@@ -43,7 +43,7 @@
             ?>
           </div>
         </div>
-        <article id="message"></article>
+        <div id="message"></div>
       </section>
     </main>
 

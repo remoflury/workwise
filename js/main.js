@@ -20,10 +20,15 @@ function checkEmptyRadionButtons(radioBtn1, radioBtn2) {
   return result;
 }
 
-function createErrorMessage(parentElem, textMessage) {
+function createErrorMessage(parentElem, textMessage, greenBg = false) {
   const messageElem = document.createElement('article');
   messageElem.id = "message"
   messageElem.textContent = textMessage;
-  messageElem.classList.add('bg-red-500', 'text-white', 'px-4', 'py-2', 'mt-8' )
+  messageElem.classList.add('text-white', 'px-4', 'py-2', 'mt-8' )
+  if (greenBg) {
+    messageElem.classList.add('bg-green')
+  } else {
+    messageElem.classList.add('bg-red-500')
+  }
   parentElem.appendChild(messageElem)
 }

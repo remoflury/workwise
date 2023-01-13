@@ -3,7 +3,21 @@ function registration() {
   const username = document.querySelector('#username').value;
   const email = document.querySelector('#email').value;
   const password = document.querySelector('#password').value;
+  const messageElem = document.querySelector('#message');
+  messageElem.innerHTML = '';
 
+  // check for empty input
+  const inputValues = [email, password];
+  if (inputFieldsEmpty(inputValues)) {
+    createErrorMessage(messageElem, "Bitte alle erforderlichen Felder ausfüllen.")
+    return;
+  }
+
+  // check for passwordlength
+  if (isPasswordLongEnough(password) === false) {
+    createErrorMessage(messageElem, "Das Passwort muss mindestens 8 Zeichen lang sein.");
+    return;
+  }
 
   // TODO: check if empty
   let formData = new FormData();
@@ -23,26 +37,24 @@ function registration() {
     })
     .then((data) => {
 
-      const messageElem = document.querySelector('#message');
-      
-      // zeige nachricht in Article an
-      messageElem.textContent = data.message;
-
       // wenn kein error, dann style so
       if (data.error == false) {
-        messageElem.classList.add('bg-green', 'text-white', 'px-4', 'py-2', 'mt-8' )
-        const loginLink = document.createElement('a');
-        const breakElem = document.createElement('br');
-        loginLink.textContent = 'Hier einloggen.';
-        loginLink.href = "/login.php";
-        loginLink.classList.add('underline', 'hover:opacity-80', 'transition');
-        messageElem.appendChild(breakElem);
-        messageElem.appendChild(loginLink);
+        createErrorMessage(messageElem, data.message, true);
+        setTimeout(() => {
+          window.location.href = '/login.php';
+        }, 2000)
       } 
       // sonst style so
       else {
-        messageElem.classList.add('bg-red-500', 'text-white', 'px-4', 'py-2', 'mt-8' )
+        createErrorMessage(messageElem, data.message);
       }
-      // console.log(data);
     })
+}
+
+function isPasswordLongEnough(password) {
+  let result = true;
+  if (password.length < 8) {
+    return result = false;
+  }
+  return result;
 }

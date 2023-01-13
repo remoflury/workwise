@@ -37,7 +37,7 @@
           
           <div class="my-2">
             <label for="password">Password</label>
-            <input type="password" name="password" id="password">
+            <input type="password" name="password" id="password" placeholder="Min. 8 Zeichen lang">
           </div>
           <div class="mt-8 flex justify-center">
             <?php 
@@ -47,7 +47,7 @@
             ?>
           </div>
         </div>
-        <article id="message"></article>
+        <div id="message"></div>
       </section>
     </main>
 
