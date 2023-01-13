@@ -18,18 +18,15 @@ function showMyBookings() {
   .then((data) => {
     console.log(data);
     const myBookingsWrapper = document.querySelector('#my-bookings-wrapper');
-    const messageElem = document.createElement('article');
 
     // wenn fehler zurückkommt
     if (data.error === true) {
       createErrorMessage(myBookingsWrapper, data.message)
       return;
     }
-
     renderBookingWorkspaces(data, myBookingsWrapper);
 
     myBookingsWrapper.classList.add('flex', 'flex-wrap', 'gap-12', 'justify-center')
-
   })
 }
 
