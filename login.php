@@ -49,6 +49,7 @@
 
     <!-- Footer -->
     <?php include 'src/layout/footer.php';?>
+    <?php include 'src/layout/jsLinks.php';?>
 
   </body>
 </html>

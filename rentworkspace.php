@@ -33,7 +33,7 @@
 
     <!-- Footer -->
     <?php include 'src/layout/footer.php';?>
-    <script src="js/rentWorkspace.js"></script>
+    <?php include 'src/layout/jsLinks.php';?>
     <script>rentWorkspace()</script>
   </body>
 </html>

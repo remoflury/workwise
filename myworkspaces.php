@@ -29,9 +29,7 @@
 
     <!-- Footer -->
     <?php include 'src/layout/footer.php';?>
-
-    <script src="js/showMyWorkspaces.js"></script>
-    <script src="js/showAllWorkspaces.js"></script>
+    <?php include 'src/layout/jsLinks.php';?>
     <script>showMyWorkspaces()</script>
 
   </body>

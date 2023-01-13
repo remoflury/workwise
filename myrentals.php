@@ -30,7 +30,7 @@
 
     <!-- Footer -->
     <?php include 'src/layout/footer.php';?>
-    <script src="js/showMyRentals.js"></script>
+    <?php include 'src/layout/jsLinks.php';?>
     <script>showMyRentals()</script>
   </body>
 </html>

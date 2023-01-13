@@ -1,0 +1,12 @@
+<script src="js/main.js"></script>
+<script src="js/editWorkspace.js"></script>
+<script src="js/login.js"></script>
+<script src="js/logout.js"></script>
+<script src="js/navigation.js"></script>
+<script src="js/newworkspace.js"></script>
+<script src="js/registration.js"></script>
+<script src="js/rentWorkspace.js"></script>
+<script src="js/showAllWorkspaces.js"></script>
+<script src="js/showMyBookings.js"></script>
+<script src="js/showMyRentals.js"></script>
+<script src="js/showMyWorkspaces.js"></script>

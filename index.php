@@ -51,7 +51,7 @@
 
     <!-- Footer -->
     <?php include 'src/layout/footer.php';?>
-    <script src="js/showAllWorkspaces.js"></script>
+    <?php include 'src/layout/jsLinks.php';?>
     <script>showAllWorkspaces()</script>
     
   </body>
