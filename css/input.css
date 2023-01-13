@@ -95,7 +95,7 @@
   /* Input Fields */
   input:not([type="radio"]),
   textarea {
-    @apply border border-black px-4 py-2 focus-within:outline focus-within:outline-orange-dark focus-within:outline-1 resize-none block !w-full
+    @apply border border-black px-4 py-2 focus-within:outline focus-within:outline-orange-dark focus-within:outline-2 resize-none block !w-full
   }
   
   .form-wrapper {

@@ -39,7 +39,7 @@
           
           <div class="my-4">
             <label for="image">Bild-Url *</label>
-            <input type="text" name="image" id="image" placeholder="https://wookie-on-death-star.galaxy">
+            <input type="text" name="image" id="image" placeholder="www.thishousedoesnotexist.org">
           </div>
           
           <div class="my-4">

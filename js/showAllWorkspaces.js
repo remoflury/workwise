@@ -68,14 +68,16 @@ function renderWorkspaceCard(data, wrapper, showStatus, renderRentBtn = false) {
     // add data to elements
     objectName.textContent = data[i][2];
     image.src = data[i][4];
-    description.textContent = 'Beschreibung: ' + data[i][5];
+    description.textContent = data[i][5];
     address.textContent = 'Adresse: ' + data[i][6]
     price.textContent = 'Preis: ' + data[i][7] + ' CHF / Tag';
     date.textContent = 'Verfügbar am: ' + data[i][8];
-    user.textContent = 'Von Nutzer : ' + data[i][9];
+    user.textContent = 'Vermieter*in : ' + data[i][9];
 
     // styling
     image.classList.add('aspect-video', 'w-full', 'h-full', 'mb-6', 'object-cover')
+    description.classList.add('my-4')
+    workspaceElem.classList.add('p-4', 'shadow-card', 'mb-8', 'last:mb-0', 'max-w-[40ch]', 'lg:max-w-[45ch]')
 
     // appending elems
     workspaceElem.appendChild(objectName);
@@ -85,7 +87,6 @@ function renderWorkspaceCard(data, wrapper, showStatus, renderRentBtn = false) {
     workspaceElem.appendChild(price);
     workspaceElem.appendChild(date);
     workspaceElem.appendChild(user);
-    workspaceElem.classList.add('p-4', 'shadow-card', 'mb-8', 'last:mb-0', 'max-w-[40ch]', 'lg:max-w-[45ch]')
     wrapper.append(workspaceElem);
 
     // wenn alle inserate angezeigt werden sollen, dann..

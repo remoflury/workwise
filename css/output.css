@@ -1085,7 +1085,7 @@ input:not([type="radio"]),
 input:not([type="radio"]):focus-within,
   textarea:focus-within {
   outline-style: solid;
-  outline-width: 1px;
+  outline-width: 2px;
   outline-color: #b07e09;
 }
 

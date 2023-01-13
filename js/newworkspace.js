@@ -36,7 +36,7 @@ function createWorkspace() {
       return response.json();
     })
     .then((data) => {
-
+      console.log(data)
       const messageElem = document.querySelector('#message');
       
       // zeige nachricht in Article an

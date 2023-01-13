@@ -24,6 +24,10 @@ function showMyBookings() {
       createErrorMessage(myBookingsWrapper, data.message)
       return;
     }
+    if (data.length === 0) {
+      createErrorMessage(myBookingsWrapper, "Du hast noch keinen Workspace gebucht.")
+      return;
+    }
     renderBookingWorkspaces(data, myBookingsWrapper);
 
     myBookingsWrapper.classList.add('flex', 'flex-wrap', 'gap-12', 'justify-center')

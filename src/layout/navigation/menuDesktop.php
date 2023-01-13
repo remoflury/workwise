@@ -12,10 +12,8 @@
     <li class="relative "data-desktop-expandable-menu>
       <p class="flex gap-x-2 items-center cursor-pointer text-xl">Buchungen<img class="h-[1.5em] transition" src="/src/assets/icons/chevron-right-white.png" alt="Design Element"></p>
       <ul class="bg-black p-4 absolute top-full left-0 hidden min-w-full">
-        <li><a href="/">Messages</a></li>
         <li class="pt-2"><a href="myrentals.php">Meine Vermietungen</a></li>
         <li class="pt-2"><a href="mybookings.php">Meine Buchungen</a></li>
-        <li class="pt-2"><a href="/">Abrechnungen</a></li>
       </ul>
     </li>
     <li>

@@ -23,7 +23,7 @@ $sql = "
   VALUES (:UserID, :ObjectName, :Status, :ImageUrl, :Description, :Address, :Price, :Date, :Username)
 ";
 $stmt = $pdo->prepare($sql);
-$stmt->bindParam(":UserId", $userId);
+$stmt->bindParam(":UserID", $userId);
 $stmt->bindParam(":ObjectName", $objectName);
 $stmt->bindParam(":Status", $status);
 $stmt->bindParam(":ImageUrl", $imageUrl);
