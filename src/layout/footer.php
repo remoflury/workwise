@@ -14,7 +14,7 @@
       </div>
       <div class="flex flex-row justify-between">
         <a href="/" title="zur Startseite" >
-          <img src="src/assets/logo/logo-neu-2.svg" alt="Logo Workwise"class="w-16 sm:w-20 md:w-24" >
+          <img src="src/assets/logo/logo-neu-2.svg" alt="Logo Workwise" class="w-16 sm:w-20 md:w-24" >
         </a>
         <div class="flex flex-row gap-3 sm:gap-5 md:gap-8 items-center">
             <img src="src/assets/icons/instagram.svg" alt="Icon Instagram" class="w-8 sm:w-10 md:w-12">
