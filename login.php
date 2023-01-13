@@ -26,13 +26,13 @@
 
         <div class="form-wrapper">
 
-          <div class="my-2">
-            <label for="email">Email</label>
+          <div class="my-4">
+            <label for="email">Email *</label>
             <input type="email" name="email" id="email" placeholder="chew@bacca.tattoine">
           </div>
           
-          <div class="my-2">
-            <label for="password">Password</label>
+          <div class="my-4">
+            <label for="password">Password *</label>
             <input type="password" name="password" id="password" placeholder="min. 8 Zeichen">
           </div>
           <div class="mt-8">

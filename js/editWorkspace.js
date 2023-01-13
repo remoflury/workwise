@@ -22,41 +22,42 @@ function editWorkspace(workspaceElem, workspace) {
     // input fields statt statische Elemente anzeigen
     workspaceElem.innerHTML = `
       <div class="">
-        <div class="my-2">
+        <div class="my-4">
+          <label class="block">Status *</label>
           <label for="status">Online</label>
           <input type="radio" name="status" id="online" >
           <label for="status">Offline</label>
           <input type="radio" name="status" id="offline">
         </div>
 
-        <div class="my-2">
-          <label for="objectname">Name Mietobjekt</label>
+        <div class="my-4">
+          <label for="objectname">Name Mietobjekt *</label>
           <input type="text" name="objectname" id="objectname" value="${workspace[2]}">
         </div>
 
         
-        <div class="my-2">
-          <label for="image">Bild-Url</label>
+        <div class="my-4">
+          <label for="image">Bild-Url *</label>
           <input type="text" name="image" id="image" value="${workspace[4]}">
         </div>
         
-        <div class="my-2">
-          <label for="description">Beschrieb Workspace</label>
+        <div class="my-4">
+          <label for="description">Beschrieb Workspace *</label>
           <textarea class="h-40" type="textarea" name="description" id="description">${workspace[5]}</textarea>
         </div>
         
-        <div class="my-2">
-          <label for="address">Adresse</label>
+        <div class="my-4">
+          <label for="address">Adresse *</label>
           <input type="text" name="address" id="address" value="${workspace[6]}">
         </div>
 
-        <div class="my-2">
-          <label for="price">Preis (CHF) / Tag</label>
+        <div class="my-4">
+          <label for="price">Preis (CHF) / Tag *</label>
           <input type="number" name="price" id="price" value="${workspace[7]}" min="0">
         </div>
 
-        <div class="my-2">
-          <label for="date">Verfügbarkeit</label>
+        <div class="my-4">
+          <label for="date">Verfügbarkeit *</label>
           <input type="date" name="date" id="date" value="${workspace[8]}">
         </div>
       </div>
