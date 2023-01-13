@@ -22,18 +22,7 @@ $stmt->bindParam(":Email", $email);
 
 $success = $stmt->execute();
 
-if ($success) {
-  $results = $stmt->fetchAll();
-  $countResult = count($results);
-
-  if ($countResult === 1) {
-    echo '{
-      "error": true,
-      "message": "Es ist schon ein User mit derselben Email-Adresse vorhanden. Bitte benutze eine andere Email."
-    }';
-    exit();
-  }
-} else {
+if (!$success) {
   echo '{
     "error": true,
     "message": "Ups, da lief etwas schief. Bitte versuche es erneut."
@@ -41,6 +30,16 @@ if ($success) {
   exit();
 }
 
+$results = $stmt->fetchAll();
+$countResult = count($results);
+
+if ($countResult === 1) {
+  echo '{
+    "error": true,
+    "message": "Es ist schon ein User mit derselben Email-Adresse vorhanden. Bitte benutze eine andere Email."
+  }';
+  exit();
+}
 
 // Statement um user in DB einzufügen (registration)
 $sql = "
@@ -53,19 +52,17 @@ $stmt->bindParam(":Email", $email);
 $stmt->bindParam(":Password", $passwordHashed);
 
 // Statement ausführen.
-$erfolg = $stmt->execute(array('Username' => $username, 'Email' => $email, 'Password' => $passwordHashed));
+$success = $stmt->execute();
 
-// wenn Ausführung erfolgreich, dann...
-if ($erfolg) {
-    echo '{
-      "error": false,
-      "message": "Registrierung erfolgreich"
-    }';
-} 
-// wenn Ausführung nicht erfolgreich, dann...
-else {
-    echo '{
-      "error": true,
-      "message": "Ups, da lief etwas schief. Bitte versuche es erneut."
-    }';
-};
+if(!$success) {
+  echo '{
+    "error": true,
+    "message": "Ups, da lief etwas schief. Bitte versuche es erneut."
+  }';
+  exit();
+}
+
+echo '{
+  "error": false,
+  "message": "Registrierung erfolgreich"
+}';

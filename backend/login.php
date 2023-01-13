@@ -16,33 +16,35 @@ $stmt = $pdo->prepare($sql);
 $stmt->bindParam(":Email", $email);
 $success = $stmt->execute();
 
-// wenn DB Statement erfolgreich
-if ($success) {
-  $results = $stmt->fetchAll();
-  $countResult = count($results);
 
-  // wenn ein user mit dieser Email vorhanden
-  if ($countResult == 1) {
-    $dbPassword = $results[0]['password'];
-    $userId = $results[0]['ID'];
-    $username = $results[0]['username'];
-    $timestamp = time();
-    checkPassword($password, $dbPassword, $userId);
-    startSession($userId, $username, $timestamp);
-    exit();
-  } else {
-    echo '{
-      "error": true,
-      "message": "Es existiert kein Nutzer mit dieser Email. Bitte versuche es mit einem anderen Login."
-    }';
-  }
-} else {
+if (!$success) {
   echo '{
     "error": true,
     "message": "Ups, da lief etwas schief. Bitte versuche es erneut."
   }';
   exit();
 }
+
+$results = $stmt->fetchAll();
+$countResult = count($results);
+
+
+// wenn kein user mit dieser Email vorhanden
+if ($countResult != 1) {
+  echo '{
+    "error": true,
+    "message": "Es existiert kein Nutzer mit dieser Email. Bitte versuche es mit einem anderen Login."
+  }';
+  exit();
+}
+
+$dbPassword = $results[0]['password'];
+$userId = $results[0]['ID'];
+$username = $results[0]['username'];
+$timestamp = time();
+checkPassword($password, $dbPassword, $userId);
+startSession($userId, $username, $timestamp);
+exit();
 
 function checkPassword($password, $dbPassword, $userId) {
   if (password_verify($password, $dbPassword)) {

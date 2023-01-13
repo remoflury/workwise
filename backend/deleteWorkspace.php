@@ -14,14 +14,15 @@ $stmt = $pdo->prepare($sql);
 $stmt->bindParam(":WorkspaceId", $workspaceId);
 $success = $stmt->execute();
 
-
-if ($success) {
-    echo '{
-        "error": false
-    }';
-} else {
+if (!$success) {
     echo '{
         "error": true
         "message": "Ups, da war the Dark Force im Spiel. Bitte versuche es später noch einmal."
     }';
+    exit();
 }
+
+echo '{
+    "error": true
+    "message": "Ups, da war the Dark Force im Spiel. Bitte versuche es später noch einmal."
+}';

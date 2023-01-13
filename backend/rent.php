@@ -16,7 +16,14 @@ $stmt->bindParam(":WorkspaceId", $workspaceId);
 
 $success = $stmt->execute();
 
-if ($success) {
+if (!$success) {
+    echo '{
+    "error": true,
+    "message": "Ups, da lief etwas schief. Bitte lade die Seite neu und versuche es noch einmal."
+  }';
+  exit();
+}
+
   $results = $stmt->fetchAll();
   $countResults = count($results);
 
@@ -29,13 +36,6 @@ if ($success) {
   } else {
     addRentToDB($workspaceId, $mieter, $vermieter);
   }
-
-} else {
-  echo '{
-    "error": true,
-    "message": "Ups, da lief etwas schief. Bitte lade die Seite neu und versuche es noch einmal."
-  }';
-}
 
 function addRentToDB($workspaceId, $mieter, $vermieter) {
   // Statement um miete in DB einzufügen (rent)
@@ -58,7 +58,6 @@ function addRentToDB($workspaceId, $mieter, $vermieter) {
     }';
   }
 }
-
 
 function changeStatusRented($workspaceId) {
   require 'config.php';

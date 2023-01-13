@@ -17,18 +17,14 @@ function showAllWorkspaces() {
       const workspacesWrapper = document.querySelector('#workspaces');
 
       // wenn fetch von DB einen error zurückgibt
-      if (data.error == true) {
-        let messageElem = document.createElement('article');
-        messageElem.textContent = data.message;
-        messageElem.classList.add('bg-red-500', 'text-white', 'px-4', 'py-4', 'mt-8' )
-        workspacesWrapper.appendChild(messageElem);
+      if (data.error == true) { 
+        createErrorMessage(workspacesWrapper, data.message)
+        return;        
       }
-      else {
-        const showStatus = false;
-        const renderRentBtn = true;
-        console.log(data);
-        renderWorkspaceCard(data, workspacesWrapper, showStatus, renderRentBtn);
-      }
+      const showStatus = false;
+      const renderRentBtn = true;
+      console.log(data);
+      renderWorkspaceCard(data, workspacesWrapper, showStatus, renderRentBtn);
     })
 }
 

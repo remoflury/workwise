@@ -16,15 +16,16 @@ $stmt->bindParam(':UserId', $userId);
 $success = $stmt->execute();
 
 // wenn statement erfolgreich
-if ($success) {
-  // fetche alle zutreffenden resultate und speichere sie in variable $results
-  $results = $stmt->fetchAll();
-
-  // gibt array als json zurück
-  echo json_encode($results);
-} else {
+if (!$success) {
   echo '{
     "error": true,
     "message": "Ups, tut uns leid. Die Inserate konnten nicht geladen werden."
   }';
+  exit();
 }
+
+// fetche alle zutreffenden resultate und speichere sie in variable $results
+$results = $stmt->fetchAll();
+
+// gibt array als json zurück
+echo json_encode($results);

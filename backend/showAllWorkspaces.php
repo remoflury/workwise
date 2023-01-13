@@ -19,23 +19,24 @@ $stmt->bindParam(":Rented", $rented);
 
 $success = $stmt->execute();
 
-// wenn statement erfolgreich
-if ($success) {
-  // fetche alle zutreffenden resultate und speichere sie in variable $results
-  $results = $stmt->fetchAll();
-
-  // gibt array als json zurück
-  session_start();
-  $loggedIn = [false];
-  if (isset($_SESSION['userId'])) {
-    $loggedIn = [true];
-  }
-
-  $results = array_merge($results, $loggedIn);
-  echo json_encode($results);
-} else {
-  echo '{
+if (!$success) {
+    echo '{
     "error": true,
     "message": "Ups, tut uns leid. Die Inserate konnten nicht geladen werden."
   }';
+  exit();
 }
+
+// fetche alle zutreffenden resultate und speichere sie in variable $results
+$results = $stmt->fetchAll();
+
+// gibt array als json zurück
+session_start();
+$loggedIn = [false];
+if (isset($_SESSION['userId'])) {
+  $loggedIn = [true];
+}
+
+// merge loggin status mit den resultaten, um auf der Startseite den Loginstatus auslesen zu können
+$results = array_merge($results, $loggedIn);
+echo json_encode($results);

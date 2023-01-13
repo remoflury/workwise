@@ -33,18 +33,17 @@ $stmt->bindParam(":Price", $price);
 $stmt->bindParam(":Date", $date);
 $stmt->bindParam(":Username", $username);
 
-$erfolg = $stmt->execute();
+$success = $stmt->execute();
 
-if ($erfolg) {
-
-    echo '{
-      "error": false,
-      "message": "Workspace erfolgreich erstellt."
-    }';
-} else {
-
+if (!$success) {
   echo '{
     "error": true,
     "message": "Ups, da lief etwas schief. Bitte versuche es später nochmals."
   }';
-};
+  exit();
+}
+
+echo '{
+  "error": false,
+  "message": "Workspace erfolgreich erstellt."
+}';
