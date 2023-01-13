@@ -19,7 +19,12 @@ function registration() {
     return;
   }
 
-  // TODO: check if empty
+  // check email validity
+  if (validateEmail(email) === false) {
+    createErrorMessage(messageElem, "Bitte ein gültiges Email Format eingeben.")
+    return;
+  }
+
   let formData = new FormData();
   formData.append('submit', true)
   formData.append('username', username);

@@ -32,3 +32,14 @@ function createErrorMessage(parentElem, textMessage, greenBg = false) {
   }
   parentElem.appendChild(messageElem)
 }
+
+function validateEmail(emailValue) {
+  let validRegex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/; 
+  let valid = false;
+
+  if (emailValue.match(validRegex)) {
+    return valid = true;
+  } else {
+    return valid;
+  }
+}
