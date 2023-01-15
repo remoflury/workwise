@@ -58,7 +58,7 @@ function renderWorkspaceCard(data, wrapper, showStatus, renderRentBtn = false) {
         statusBall.classList.add('w-4', 'h-4', 'rounded-full')
         status.classList.add('flex', 'gap-4', 'items-center', 'mb-4')
         
-        if (data[i][3] == 'online') {
+        if (data[i].status == 'online') {
           statusBall.classList.add('bg-green')
         } else {
           statusBall.classList.add('bg-orange-dark')
@@ -70,13 +70,13 @@ function renderWorkspaceCard(data, wrapper, showStatus, renderRentBtn = false) {
       }
       
       // add data to elements
-      objectName.textContent = data[i][2];
-      image.src = data[i][4];
-      description.textContent = data[i][5];
-      address.textContent = 'Adresse: ' + data[i][6]
-      price.textContent = 'Preis: ' + data[i][7] + ' CHF / Tag';
-      date.textContent = 'Verfügbar am: ' + data[i][8];
-      user.textContent = 'Vermieter*in : ' + data[i][9];
+      objectName.textContent = data[i].objectname;
+      image.src = data[i].imageurl;
+      description.textContent = data[i].description;
+      address.textContent = 'Adresse: ' + data[i].address;
+      price.textContent = 'Preis: ' + data[i].price + ' CHF / Tag';
+      date.textContent = 'Verfügbar am: ' + data[i].date;
+      user.textContent = 'Vermieter*in : ' + data[i].users_username;
   
       // styling
       image.classList.add('aspect-video', 'w-full', 'h-full', 'mb-6', 'object-cover')
@@ -100,7 +100,7 @@ function renderWorkspaceCard(data, wrapper, showStatus, renderRentBtn = false) {
   
       // für Startseite: Jetzt mieten Button
       if (renderRentBtn) {
-        renderRentButton(workspaceElem, data[i][0])
+        renderRentButton(workspaceElem, data[i].ID)
       }
     }
   }

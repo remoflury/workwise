@@ -60,13 +60,13 @@ function createRentWorkspace(data, workspaceWrapper) {
   dateElemLeft.textContent = 'Mietdatum:'
   userElemLeft.textContent = 'Vermieter*in:'
   
-  titleElem.textContent = data[0][2];
-  imgElem.src = data[0][4];
-  descElem.innerHTML =data[0][5];
-  addressElemRight.textContent = data[0][6];
-  priceElemRight.textContent = data[0][7] + ' CHF / Tag';
-  dateElemRight.textContent = data[0][8];
-  userElemRight.textContent = data[0][9];
+  titleElem.textContent = data[0].objectname;
+  imgElem.src = data[0].imageurl;
+  descElem.innerHTML =data[0].description;
+  addressElemRight.textContent = data[0].address;
+  priceElemRight.textContent = data[0].price + ' CHF / Tag';
+  dateElemRight.textContent = data[0].date;
+  userElemRight.textContent = data[0].users_username;
   
   workspaceWrapper.classList.add('grid', 'grid-cols-2', 'lg:grid-cols-10');
   titleElem.classList.add('col-span-full', 'lg:col-start-3')
@@ -114,9 +114,9 @@ function rentNow(data, userId) {
   if (confirm("Willst du du jetzt verbindlich mieten?")) {
     let formData = new FormData();
     formData.append('submit', true);
-    formData.append('workspaceId', data[0][0]);
+    formData.append('workspaceId', data[0].ID);
     formData.append('mieter', userId)
-    formData.append('vermieter', data[0][1])
+    formData.append('vermieter', data[0].users_id)
   
     fetch(`${baseUrl}/backend/rent.php`, {
       body: formData,

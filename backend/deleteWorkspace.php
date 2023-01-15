@@ -16,13 +16,13 @@ $success = $stmt->execute();
 
 if (!$success) {
     echo '{
-        "error": true
+        "error": true,
         "message": "Ups, da war the Dark Force im Spiel. Bitte versuche es später noch einmal."
     }';
     exit();
 }
 
 echo '{
-    "error": true
+    "error": false,
     "message": "Erfolgreich gelöscht."
 }';

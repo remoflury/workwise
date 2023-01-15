@@ -28,7 +28,7 @@ if (!$success) {
 }
 
 // fetche alle zutreffenden resultate und speichere sie in variable $results
-$results = $stmt->fetchAll();
+$results = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
 // gibt array als json zurück
 session_start();

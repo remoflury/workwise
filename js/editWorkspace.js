@@ -32,33 +32,33 @@ function editWorkspace(workspaceElem, workspace) {
 
         <div class="my-4">
           <label for="objectname">Name Mietobjekt *</label>
-          <input type="text" name="objectname" id="objectname" value="${workspace[2]}">
+          <input type="text" name="objectname" id="objectname" value="${workspace.objectname}">
         </div>
 
         
         <div class="my-4">
           <label for="image">Bild-Url *</label>
-          <input type="text" name="image" id="image" value="${workspace[4]}">
+          <input type="text" name="image" id="image" value="${workspace.imageurl}">
         </div>
         
         <div class="my-4">
           <label for="description">Beschrieb Workspace *</label>
-          <textarea class="h-40" type="textarea" name="description" id="description">${workspace[5]}</textarea>
+          <textarea class="h-40" type="textarea" name="description" id="description">${workspace.description}</textarea>
         </div>
         
         <div class="my-4">
           <label for="address">Adresse *</label>
-          <input type="text" name="address" id="address" value="${workspace[6]}">
+          <input type="text" name="address" id="address" value="${workspace.address}">
         </div>
 
         <div class="my-4">
           <label for="price">Preis (CHF) / Tag *</label>
-          <input type="number" name="price" id="price" value="${workspace[7]}" min="0">
+          <input type="number" name="price" id="price" value="${workspace.price}" min="0">
         </div>
 
         <div class="my-4">
           <label for="date">Verfügbarkeit *</label>
-          <input type="date" name="date" id="date" value="${workspace[8]}">
+          <input type="date" name="date" id="date" value="${workspace.date}">
         </div>
       </div>
     `;
@@ -151,7 +151,7 @@ function deleteWorkspace(workspaceElem, workspaceData) {
   if (confirm("Willst du dein Inserat wirklich löschen?")) {
     let formData = new FormData();
     formData.append('submit', true);
-    formData.append('workspaceid', workspaceData[0]);
+    formData.append('workspaceid', workspaceData.ID);
 
     fetch(`${baseUrl}/backend/deleteWorkspace.php`,
     {

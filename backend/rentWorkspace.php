@@ -23,8 +23,8 @@ if (!$success) {
   exit();
 }
 
-  $result = $stmt->fetchAll();
-  $resultCount = count($result);
+$result = $stmt->fetchAll(PDO::FETCH_ASSOC);
+$resultCount = count($result);
 
 // Wenn kein Resultat mit dieser ID vorhanden
 if ($resultCount !== 1 || $resultCount === 0) {

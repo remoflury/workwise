@@ -28,7 +28,6 @@ if (!$success) {
 $results = $stmt->fetchAll();
 $countResult = count($results);
 
-
 // wenn kein user mit dieser Email vorhanden
 if ($countResult != 1) {
   echo '{
