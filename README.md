@@ -3,7 +3,9 @@ Workwise ist eine Vermittlungsplattform, die Personen mit freien Räumen und Co-
 
 ## Coding Standards
 Intendation: 4
+
 semantische Tags verwenden
+
 Schreibweisen:
   - JS: camelCase
   - PHP: camelCase
