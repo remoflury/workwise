@@ -45,7 +45,7 @@ checkPassword($password, $dbPassword, $userId);
 startSession($userId, $username, $timestamp);
 exit();
 
-function checkPassword($password, $dbPassword, $userId) {
+function checkPassword($password, $dbPassword) {
   if (password_verify($password, $dbPassword)) {
     echo '{
       "error": false,
