@@ -87,7 +87,8 @@ function updateWorkspace(workspaceElem, workspaceData) {
   let address = workspaceElem.querySelector('#address').value;
   let price = workspaceElem.querySelector('#price').value;
   let date = workspaceElem.querySelector('#date').value;
-  let workspaceID = workspaceData[0];
+  let workspaceID = workspaceData.ID;
+  console.log(workspaceID);
 
   
   // check for empty inputs
